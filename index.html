@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avolo — The Future, Shipped Early | Automation Agency</title>
+  <meta name="description" content="Avolo is an automation agency helping businesses save time and grow with websites, AI chatbots, workflow automation, and marketing automation. Founded by Sourab Bachar.">
+  <meta name="keywords" content="automation agency, AI chatbots, workflow automation, marketing automation, web development">
+  <meta name="author" content="Sourab Bachar">
+  <meta property="og:title" content="Avolo — The Future, Shipped Early">
+  <meta property="og:description" content="Avolo is an automation agency helping businesses save time and grow. Be among the first to experience it.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Avolo — The Future, Shipped Early">
+  <meta name="twitter:description" content="Avolo is an automation agency helping businesses save time and grow. Be among the first to experience it.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Ambient background effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+  <header class="header fade-in">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/" class="logo" aria-label="Avolo Home">
+        <span class="logo__icon">◈</span>
+        <span class="logo__text">Avolo</span>
+      </a>
+      <span class="nav__badge">Coming Soon</span>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero fade-in" id="hero">
+      <p class="hero__eyebrow">Automation Agency</p>
+      <h1 class="hero__headline">The future,<br> shipped early.</h1>
+      <p class="hero__subtext">Avolo is something new. Be among the first to experience it.</p>
+      <p class="hero__founder">Founded by <strong>Sourab Bachar</strong></p>
+
+      <!-- Email Signup -->
+      <form class="signup" id="signup-form" aria-label="Email signup">
+        <div class="signup__wrapper">
+          <input
+            type="email"
+            class="signup__input"
+            id="email-input"
+            placeholder="Enter your email"
+            aria-label="Email address"
+            required
+            autocomplete="email"
+          >
+          <button type="submit" class="signup__btn" id="notify-btn">
+            <span class="signup__btn-text">Notify Me</span>
+            <span class="signup__btn-icon">→</span>
+          </button>
+        </div>
+        <p class="signup__confirmation" id="signup-confirmation" role="status" aria-live="polite">
+          ✓ You're on the list. We'll be in touch.
+        </p>
+      </form>
+    </section>
+
+    <!-- About Section -->
+    <section class="about fade-in" id="about">
+      <div class="about__container">
+        <span class="section-label">About</span>
+        <p class="about__text">
+          Avolo is an automation agency founded by <strong>Sourab Bachar</strong>, helping businesses save time and grow with websites, AI chatbots, workflow automation, and marketing automation.
+        </p>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services fade-in" id="services">
+      <span class="section-label">What We Build</span>
+      <h2 class="services__heading">Everything you need to scale</h2>
+      <div class="services__grid">
+        <article class="card" id="service-websites">
+          <div class="card__icon-wrapper">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="3" width="20" height="14" rx="2"/>
+              <path d="M8 21h8"/>
+              <path d="M12 17v4"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Websites</h3>
+          <p class="card__desc">Custom-built, fast, modern sites that convert visitors into customers.</p>
+        </article>
+
+        <article class="card" id="service-chatbots">
+          <div class="card__icon-wrapper">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              <circle cx="9" cy="10" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="12" cy="10" r="1" fill="currentColor" stroke="none"/>
+              <circle cx="15" cy="10" r="1" fill="currentColor" stroke="none"/>
+            </svg>
+          </div>
+          <h3 class="card__title">AI Chatbots</h3>
+          <p class="card__desc">24/7 automated customer support &amp; lead capture, powered by AI.</p>
+        </article>
+
+        <article class="card" id="service-workflow">
+          <div class="card__icon-wrapper">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 6h4v4H4z"/>
+              <path d="M16 6h4v4h-4z"/>
+              <path d="M10 14h4v4h-4z"/>
+              <path d="M8 8h8"/>
+              <path d="M6 10v4l6 0"/>
+              <path d="M18 10v4l-6 0"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Workflow Automation</h3>
+          <p class="card__desc">Connect your tools, eliminate repetitive tasks, and reclaim your time.</p>
+        </article>
+
+        <article class="card" id="service-marketing">
+          <div class="card__icon-wrapper">
+            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+              <polyline points="22,6 12,13 2,6"/>
+            </svg>
+          </div>
+          <h3 class="card__title">Marketing Automation</h3>
+          <p class="card__desc">Automated content, email, and ad campaigns that run while you sleep.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fade-in">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 Avolo. All rights reserved.</p>
+      <p class="footer__contact">
+        <a href="tel:+917328060281" class="footer__phone">
+          <span class="footer__phone-icon">✆</span> +91 73280 60281
+        </a>
+      </p>
+      <p class="footer__founder">A venture by Sourab Bachar</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
