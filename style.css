@@ -359,6 +359,17 @@ strong {
   font-size: 1rem;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px var(--clr-accent-glow);
+  max-width: 100%;
+}
+
+.footer__contact a,
+.form__status,
+.section-copy,
+.card__desc,
+.order-section__meta,
+.contact-card p {
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .signup__btn:active {
