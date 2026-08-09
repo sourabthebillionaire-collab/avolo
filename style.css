@@ -28,9 +28,9 @@
   --space-xs:  0.5rem;
   --space-sm:  1rem;
   --space-md:  1.5rem;
-  --space-lg:  3rem;
-  --space-xl:  5rem;
-  --space-2xl: 8rem;
+  --space-lg:  2.5rem;
+  --space-xl:  3.5rem;
+  --space-2xl: 5rem;
 
   /* Radius */
   --radius-sm: 8px;
@@ -248,6 +248,7 @@ strong {
   text-align: center;
   padding-top: var(--space-2xl);
   padding-bottom: var(--space-xl);
+  background: rgba(255,255,255,0.01);
 }
 
 .hero__eyebrow {
@@ -292,7 +293,11 @@ strong {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
   color: var(--clr-text-muted);
   max-width: 480px;
-    width: min(100%, 480px);
+  width: min(100%, 480px);
+  margin: 0 auto var(--space-sm);
+  line-height: 1.7;
+}
+
 .hero__founder {
   font-size: 0.85rem;
   color: var(--clr-text-dim);
@@ -616,6 +621,7 @@ strong {
   text-align: center;
   padding-top: var(--space-lg);
   padding-bottom: var(--space-xl);
+  background: rgba(255,255,255,0.01);
 }
 
 .about__container {
@@ -651,6 +657,15 @@ strong {
   text-align: center;
   padding-top: var(--space-lg);
   padding-bottom: var(--space-2xl);
+  background: rgba(255,255,255,0.01);
+}
+
+/* --- Pricing Section --- */
+.pricing-section {
+  text-align: center;
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+  background: rgba(255,255,255,0.01);
 }
 
 .services__heading {
@@ -701,8 +716,8 @@ strong {
 }
 
 .card__icon-wrapper {
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -720,8 +735,8 @@ strong {
 }
 
 .card__icon {
-  width: 22px;
-  height: 22px;
+  width: 18px;
+  height: 18px;
 }
 
 .card__title {
