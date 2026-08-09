@@ -53,6 +53,7 @@
 }
 
 html {
+  font-size: 16px;
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -209,24 +210,36 @@ strong {
 }
 
 .nav__toggle {
-  display: none;
-  border: none;
-  background: transparent;
-  cursor: pointer;
-  padding: 0.5rem;
-}
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    padding: 0.5rem;
+    min-width: 44px;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-.nav__toggle-bar {
-  display: block;
-  width: 22px;
-  height: 2px;
-  margin: 4px 0;
-  background: var(--clr-text);
-  border-radius: 9999px;
-}
-
+  .nav__toggle-bar {
+    display: block;
+    width: 22px;
+    height: 2px;
+    margin: 4px 0;
+    background: var(--clr-text);
+    border-radius: 9999px;
+  }
 .hero__cta {
   display: inline-flex;
+  margin-top: var(--space-lg);
+}
+
+.hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
   margin-top: var(--space-lg);
 }
 
@@ -279,10 +292,7 @@ strong {
   font-size: clamp(1rem, 2.2vw, 1.25rem);
   color: var(--clr-text-muted);
   max-width: 480px;
-  margin: 0 auto var(--space-sm);
-  line-height: 1.7;
-}
-
+    width: min(100%, 480px);
 .hero__founder {
   font-size: 0.85rem;
   color: var(--clr-text-dim);
@@ -321,7 +331,7 @@ strong {
   outline: none;
   color: var(--clr-text);
   font-family: var(--ff-body);
-  font-size: 0.95rem;
+  font-size: 1rem;
   padding: 0.85rem 1rem;
   min-width: 0;
 }
@@ -338,16 +348,10 @@ strong {
   color: #fff;
   border: none;
   border-radius: var(--radius-md);
-  padding: 0.85rem 1.5rem;
+  padding: 0.9rem 1.5rem;
+  min-height: 44px;
   font-family: var(--ff-body);
-  font-size: 0.9rem;
-  font-weight: 600;
-  cursor: pointer;
-  white-space: nowrap;
-  transition: transform var(--transition-base), box-shadow var(--transition-base), opacity var(--transition-base);
-}
-
-.signup__btn:hover {
+  font-size: 1rem;
   transform: translateY(-1px);
   box-shadow: 0 6px 20px var(--clr-accent-glow);
 }
@@ -405,9 +409,7 @@ strong {
 .form__label {
   font-size: 0.85rem;
   color: var(--clr-text-muted);
-}
-
-.form__input,
+    line-height: 1.4;
 .form__textarea,
 .form__select {
   background: transparent;
@@ -416,16 +418,7 @@ strong {
   color: var(--clr-text);
   padding: 0.95rem 1rem;
   font-family: var(--ff-body);
-  font-size: 0.95rem;
-}
-
-.form__textarea {
-  min-height: 160px;
-  resize: vertical;
-}
-
-.form__actions {
-  margin-top: var(--space-lg);
+  font-size: 1rem;
 }
 
 .form__status {
@@ -436,6 +429,13 @@ strong {
 
 .form__status.is-success {
   color: #34d399;
+}
+
+.form__actions {
+  margin-top: var(--space-md);
+  display: flex;
+  justify-content: flex-start;
+  gap: 0.75rem;
 }
 
 .order-section__layout,
@@ -835,6 +835,14 @@ strong {
     width: min(240px, calc(100vw - 2rem));
   }
 
+  .nav__menu .nav__link {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+  }
+
   .nav__menu--open {
     display: flex;
   }
@@ -850,6 +858,18 @@ strong {
     font-size: 2.4rem;
   }
 
+  .hero__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__cta {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    min-height: 50px;
+  }
+
   .signup__wrapper {
     flex-direction: column;
     gap: 0;
@@ -858,14 +878,46 @@ strong {
   .signup__btn {
     justify-content: center;
     border-radius: var(--radius-md);
+    width: 100%;
+    min-height: 50px;
+  }
+
+  .form__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .form__actions .signup__btn {
+    width: 100%;
+  }
+
+  .form__input,
+  .form__textarea,
+  .form__select {
+    min-height: 48px;
   }
 
   .about__container {
     padding: var(--space-md);
   }
 
-  .card {
+  .card,
+  .service-card,
+  .pricing-card,
+  .order-section__support,
+  .contact-card,
+  .about__info-card {
     padding: var(--space-md);
+  }
+
+  .nav__menu {
+    width: calc(100vw - 2rem);
+    right: 1rem;
+    left: 1rem;
   }
 
   .nav__badge {
@@ -878,14 +930,5 @@ strong {
   .about__layout,
   .pricing-grid {
     grid-template-columns: 1fr;
-  }
-
-  .order-section,
-  .contact-section,
-  .about__story,
-  .about__mission,
-  .service-card,
-  .pricing-card {
-    padding: var(--space-md);
   }
 }
