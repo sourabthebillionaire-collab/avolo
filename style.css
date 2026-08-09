@@ -716,8 +716,8 @@ strong {
 }
 
 .card__icon-wrapper {
-  width: 36px;
-  height: 36px;
+  width: 28px;
+  height: 28px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -735,8 +735,8 @@ strong {
 }
 
 .card__icon {
-  width: 18px;
-  height: 18px;
+  width: 14px;
+  height: 14px;
 }
 
 .card__title {
