@@ -863,7 +863,21 @@ strong {
   }
 
   .nav__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: 100%;
+    min-height: 44px;
+    height: auto;
+    padding: 0;
+    align-self: center;
+    flex-shrink: 0;
+  }
+
+  .nav__menu .signup__btn {
+    width: 100%;
+    min-height: 44px;
+    height: auto;
   }
 }
 
