@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order a Service | Avolo</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
+  <meta name="description" content="Submit your automation brief to Avolo and get a fast proposal for websites, chatbots, workflow automation, or marketing automation.">
+  <meta name="author" content="Sourab Bachar">
+  <link rel="canonical" href="https://avolo.in/order.html">
+
+  <meta property="og:title" content="Order a Service | Avolo">
+  <meta property="og:description" content="Submit your automation brief to Avolo and get a fast proposal for websites, chatbots, workflow automation, or marketing automation.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://avolo.in/order.html">
+  <meta property="og:image" content="https://avolo.in/og-image.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Order a Service | Avolo">
+  <meta name="twitter:description" content="Submit your automation brief to Avolo and get a fast proposal for websites, chatbots, workflow automation, or marketing automation.">
+  <meta name="twitter:image" content="https://avolo.in/og-image.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+
+  <header class="header fade-in">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="index.html" class="logo" aria-label="Avolo Home">
+        <span class="logo__icon">◈</span>
+        <span class="logo__text">Avolo</span>
+      </a>
+
+      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+        <span class="nav__toggle-bar"></span>
+      </button>
+
+      <div class="nav__menu" id="nav-menu">
+        <a href="index.html" class="nav__link">Home</a>
+        <a href="services.html" class="nav__link">Services</a>
+        <a href="about.html" class="nav__link">About</a>
+        <a href="pricing.html" class="nav__link">Pricing</a>
+        <a href="contact.html" class="nav__link">Contact</a>
+        <a href="order.html" class="signup__btn nav__button">Order Now <span class="signup__btn-icon">→</span></a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero fade-in" id="hero">
+      <p class="hero__eyebrow">Order</p>
+      <h1 class="hero__headline">Start your automation project now.</h1>
+      <p class="hero__subtext">Tell us what you need and Avolo will reply with a tailored plan for websites, AI chatbots, workflow automation, or marketing automation.</p>
+      <p class="hero__founder">Fast, human-ready proposals from Sourab Bachar’s automation agency.</p>
+    </section>
+
+    <section class="order-section fade-in">
+      <div class="order-section__layout">
+        <div class="order-section__intro">
+          <span class="section-label">Lead capture</span>
+          <h2 class="section-heading">A clear brief is the first step to a fast launch.</h2>
+          <p class="section-copy">Complete this form and we’ll review the details, follow up with a strategy, and share next steps.</p>
+          <div class="order-section__meta">
+            <p><strong>Phone</strong> <a href="tel:+917328060281">+91 73280 60281</a></p>
+            <p><strong>Email</strong> <a href="mailto:hello@avolo.in">hello@avolo.in</a></p>
+          </div>
+        </div>
+
+        <form id="order-form" class="form js-formspree" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+          <!-- TODO: replace YOUR_FORM_ID with real Formspree form ID after signing up at formspree.io -->
+          <input type="hidden" name="_subject" value="New service request from Avolo website">
+          <div class="form__grid">
+            <label class="form__field">
+              <span class="form__label">Full Name</span>
+              <input type="text" name="name" class="form__input" required autocomplete="name">
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Email</span>
+              <input type="email" name="_replyto" class="form__input" required autocomplete="email">
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Phone Number</span>
+              <input type="tel" name="phone" class="form__input" required autocomplete="tel">
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Business / Company Name</span>
+              <input type="text" name="company" class="form__input" autocomplete="organization">
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Service Interested In</span>
+              <select id="service-interested" name="service" class="form__select" required>
+                <option value="websites">Website</option>
+                <option value="chatbots">AI Chatbot</option>
+                <option value="workflow">Workflow Automation</option>
+                <option value="marketing">Marketing Automation</option>
+                <option value="not-sure-yet">Not Sure Yet</option>
+              </select>
+            </label>
+
+            <label class="form__field">
+              <span class="form__label">Budget Range</span>
+              <select name="budget" class="form__select">
+                <option value="Under ₹10k">Under ₹10k</option>
+                <option value="₹10k–₹50k">₹10k–₹50k</option>
+                <option value="₹50k–₹1L">₹50k–₹1L</option>
+                <option value="₹1L+">₹1L+</option>
+                <option value="Not Sure">Not Sure</option>
+              </select>
+            </label>
+
+            <label class="form__field form__field--full">
+              <span class="form__label">Project Details</span>
+              <textarea name="details" class="form__textarea" rows="5" required placeholder="Tell us what you need"></textarea>
+            </label>
+          </div>
+
+          <div class="form__actions">
+            <button type="submit" class="signup__btn">Send Request <span class="signup__btn-icon">→</span></button>
+          </div>
+
+          <p class="form__status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+
+      <div class="order-section__support fade-in">
+        <p class="section-label">Quick contact</p>
+        <p class="section-copy">Prefer to chat directly? Use WhatsApp and we’ll reply fast with options for your chosen service.</p>
+        <a id="whatsapp-link" href="https://wa.me/917328060281?text=Hi%2C%20I%27m%20interested%20in%20a%20service%20from%20Avolo." class="signup__btn">Message us on WhatsApp <span class="signup__btn-icon">→</span></a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer fade-in">
+    <div class="footer__inner">
+      <p class="footer__copy">&copy; 2026 Avolo. All rights reserved.</p>
+      <p class="footer__contact"><a href="tel:+917328060281" class="footer__phone">✆ +91 73280 60281</a></p>
+      <p class="footer__contact"><a href="mailto:hello@avolo.in" class="footer__email">hello@avolo.in</a></p>
+      <p class="footer__links"><a href="services.html">Services</a> · <a href="contact.html">Contact</a></p>
+      <p class="footer__founder">A venture by Sourab Bachar</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
