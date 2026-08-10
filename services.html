@@ -4,27 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Services | Avolo</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
   <meta name="description" content="Explore Avolo's services for websites, AI chatbots, workflow automation, and marketing automation.">
   <meta name="author" content="Sourab Bachar">
   <link rel="canonical" href="https://avolo.in/services.html">
-
-  <meta property="og:title" content="Services | Avolo">
-  <meta property="og:description" content="Explore Avolo's services for websites, AI chatbots, workflow automation, and marketing automation.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://avolo.in/services.html">
-  <meta property="og:image" content="https://avolo.in/og-image.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Services | Avolo">
-  <meta name="twitter:description" content="Explore Avolo's services for websites, AI chatbots, workflow automation, and marketing automation.">
-  <meta name="twitter:image" content="https://avolo.in/og-image.png">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -41,17 +23,17 @@
         <span class="logo__icon">◈</span>
         <span class="logo__text">Avolo</span>
       </a>
-
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
       </button>
-
       <div class="nav__menu" id="nav-menu">
         <a href="index.html" class="nav__link">Home</a>
         <a href="services.html" class="nav__link">Services</a>
         <a href="about.html" class="nav__link">About</a>
+        <a href="work.html" class="nav__link">Work</a>
+        <a href="blog.html" class="nav__link">Blog</a>
         <a href="pricing.html" class="nav__link">Pricing</a>
         <a href="contact.html" class="nav__link">Contact</a>
         <a href="order.html" class="signup__btn nav__button">Start a Project <span class="signup__btn-icon">→</span></a>
@@ -60,100 +42,80 @@
   </header>
 
   <main>
-    <section class="hero fade-in" id="hero">
+    <section class="hero fade-in">
       <p class="hero__eyebrow">Services</p>
-      <h1 class="hero__headline">Automation that keeps your team moving without extra work.</h1>
-      <p class="hero__subtext">Avolo builds websites, AI chatbots, workflow automation, and marketing systems that remove busywork and make your daily operations feel easier.</p>
-      <a href="order.html" class="signup__btn hero__cta">Start Your Project <span class="signup__btn-icon">→</span></a>
+      <h1 class="hero__headline">Practical systems for a more organized business.</h1>
+      <p class="hero__subtext">We build the pieces that make daily operations feel lighter: polished websites, useful chatbots, and automations that remove repetitive work.</p>
+      <div class="hero__actions">
+        <a href="order.html" class="signup__btn">Start Your Project <span class="signup__btn-icon">→</span></a>
+      </div>
     </section>
 
     <section class="service-card fade-in" id="websites">
       <div class="service-card__header">
         <span class="section-label">Websites</span>
-        <div class="card__icon-wrapper">
-          <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <rect x="4" y="6" width="16" height="11" rx="2"/>
-            <path d="M4 10h16"/>
-          </svg>
-        </div>
+        <div class="card__icon-wrapper">◈</div>
       </div>
-      <h2 class="service-card__title">Websites that feel fast, modern, and built for conversion.</h2>
-      <p class="service-card__text">Every website is designed to feel premium while staying lightweight and easy to manage. Avolo delivers clean landing pages, business sites, and campaign-ready pages that reflect your brand.</p>
-      <p class="service-card__text">We focus on clear messaging, simple navigation, and fast performance so your first impression is strong.</p>
+      <h2 class="service-card__title">Websites built to look sharp and steer attention.</h2>
+      <p class="service-card__text">From landing pages to full business sites, we shape the experience around how people discover your offer and decide to act.</p>
       <ul class="service-card__list">
-        <li>Landing pages & lead funnels</li>
-        <li>Responsive design for mobile and desktop</li>
-        <li>SEO-friendly structure and fast loading</li>
+        <li>Fast, responsive pages for mobile and desktop</li>
+        <li>Clear messaging and thoughtful conversion paths</li>
+        <li>SEO-friendly structure and polished launch support</li>
       </ul>
-      <a href="order.html?service=websites" class="signup__btn">Start a Project <span class="signup__btn-icon">→</span></a>
+      <a href="order.html?service=websites" class="button">Book a website project</a>
     </section>
 
     <section class="service-card fade-in" id="chatbots">
       <div class="service-card__header">
-        <span class="section-label">AI Chatbots</span>
-        <div class="card__icon-wrapper">
-          <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6 8h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-3 3V10a2 2 0 0 1 2-2z"/>
-          </svg>
-        </div>
+        <span class="section-label">AI chatbots</span>
+        <div class="card__icon-wrapper">✦</div>
       </div>
-      <h2 class="service-card__title">AI-powered chatbots that capture leads and support customers 24/7.</h2>
-      <p class="service-card__text">Avolo builds bots that answer questions, route prospects, and qualify leads automatically. Your customers get faster responses, and you get better signal from every conversation.</p>
+      <h2 class="service-card__title">Conversation tools that answer questions and capture leads.</h2>
+      <p class="service-card__text">We design chat experiences that feel useful and calm, so visitors get answers at the right moment and your team gets fewer repetitive back-and-forths.</p>
       <ul class="service-card__list">
+        <li>FAQ and support conversations</li>
         <li>Lead capture and qualification flows</li>
-        <li>Customer support and FAQs</li>
-        <li>WhatsApp / website chat integration</li>
+        <li>WhatsApp and website chat integration</li>
       </ul>
-      <a href="order.html?service=chatbots" class="signup__btn">Start a Project <span class="signup__btn-icon">→</span></a>
+      <a href="order.html?service=chatbots" class="button">Plan a chatbot</a>
     </section>
 
     <section class="service-card fade-in" id="workflow">
       <div class="service-card__header">
-        <span class="section-label">Workflow Automation</span>
-        <div class="card__icon-wrapper">
-          <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M7 13a5 5 0 1 1 8-4.33"/>
-            <path d="M15.5 5.5v4h-4"/>
-          </svg>
-        </div>
+        <span class="section-label">Workflow automation</span>
+        <div class="card__icon-wrapper">⟳</div>
       </div>
-      <h2 class="service-card__title">Automations that remove repetitive work from your daily workflow.</h2>
-      <p class="service-card__text">Connect your tools, sync data, and automate the handoffs that usually slow teams down. Avolo simplifies operations so you can focus on the work that actually moves your business forward.</p>
+      <h2 class="service-card__title">Automations that remove the repeated mental load.</h2>
+      <p class="service-card__text">We connect tools, trigger actions, and simplify handoffs so the work that should be automatic no longer lives in your inbox or task list.</p>
       <ul class="service-card__list">
-        <li>CRM, email, and task automation</li>
-        <li>Trigger-based workflows and notifications</li>
-        <li>Custom business rules without coding overhead</li>
+        <li>CRM and email workflow setup</li>
+        <li>Action-based triggers and reminders</li>
+        <li>Reliable systems without over-engineering</li>
       </ul>
-      <a href="order.html?service=workflow" class="signup__btn">Start a Project <span class="signup__btn-icon">→</span></a>
+      <a href="order.html?service=workflow" class="button">Automate a workflow</a>
     </section>
 
     <section class="service-card fade-in" id="marketing">
       <div class="service-card__header">
-        <span class="section-label">Marketing Automation</span>
-        <div class="card__icon-wrapper">
-          <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M6 15l4-4 3 3 5-5"/>
-            <path d="M17 6v5h-5"/>
-          </svg>
-        </div>
+        <span class="section-label">Marketing automation</span>
+        <div class="card__icon-wrapper">↗</div>
       </div>
-      <h2 class="service-card__title">Marketing automation that keeps leads moving through your funnel.</h2>
-      <p class="service-card__text">From email sequences to campaign follow-up, Avolo builds marketing systems that keep prospects engaged without manual effort.</p>
+      <h2 class="service-card__title">Follow-up systems that keep momentum going.</h2>
+      <p class="service-card__text">From welcome sequences to nurture flows, we build simple automations that keep leads moving without asking your team to remember every step.</p>
       <ul class="service-card__list">
-        <li>Automated email and remarketing flows</li>
-        <li>Lead nurturing and campaign sequencing</li>
-        <li>Tracking and follow-up for high-intent leads</li>
+        <li>Welcome and reminder sequences</li>
+        <li>Campaign follow-up and lead nurturing</li>
+        <li>Tracking and updates for better visibility</li>
       </ul>
-      <a href="order.html?service=marketing" class="signup__btn">Start a Project <span class="signup__btn-icon">→</span></a>
+      <a href="order.html?service=marketing" class="button">Build a marketing flow</a>
     </section>
   </main>
 
   <footer class="footer fade-in">
     <div class="footer__inner">
-      <p class="footer__copy">&copy; 2026 Avolo. All rights reserved.</p>
+      <p class="footer__copy">© 2026 Avolo. All rights reserved.</p>
       <p class="footer__contact"><a href="tel:+917328060281" class="footer__phone">✆ +91 73280 60281</a></p>
-      <p class="footer__contact"><a href="mailto:hello@avolo.in" class="footer__email">hello@avolo.in</a></p>
-      <p class="footer__links"><a href="services.html">Services</a> · <a href="contact.html">Contact</a></p>
       <p class="footer__founder">A venture by Sourab Bachar</p>
     </div>
   </footer>

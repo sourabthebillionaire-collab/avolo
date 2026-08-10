@@ -1,12 +1,6 @@
-/* ============================================================
-   Avolo — Coming Soon Landing Page
-   Vanilla JavaScript
-   ============================================================ */
-
 (function () {
   'use strict';
 
-  // --- Fade-in on scroll / load ---
   function initFadeAnimations() {
     var fadeElements = document.querySelectorAll('.fade-in');
 
@@ -29,7 +23,6 @@
     }
   }
 
-  // --- Email signup form ---
   function initSignupForm() {
     var form = document.getElementById('signup-form');
     var input = document.getElementById('email-input');
@@ -62,12 +55,10 @@
     });
   }
 
-  // --- Email validation ---
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  // --- Shake animation for invalid input ---
   function shakeElement(el) {
     el.style.transition = 'transform 0.08s ease';
     var shakes = [6, -6, 4, -4, 2, 0];
@@ -86,7 +77,6 @@
     nextShake();
   }
 
-  // --- Card hover glow effect (mouse tracking) ---
   function initCardHoverGlow() {
     var cards = document.querySelectorAll('.card');
 
@@ -101,7 +91,6 @@
     });
   }
 
-  // --- Main nav behavior ---
   function initMainNav() {
     var navToggle = document.querySelector('.nav__toggle');
     var navMenu = document.getElementById('nav-menu');
@@ -121,7 +110,6 @@
     });
   }
 
-  // --- Highlight current page link ---
   function initActiveNavLink() {
     var path = window.location.pathname.split('/').pop() || 'index.html';
     if (path === '') {
@@ -136,7 +124,53 @@
     });
   }
 
-  // --- Formspree AJAX submission ---
+  function initFilterControls() {
+    var buttons = document.querySelectorAll('.filter-pill');
+    var cards = document.querySelectorAll('.work-card, .blog-card');
+
+    if (!buttons.length || !cards.length) return;
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var filter = button.getAttribute('data-filter');
+
+        buttons.forEach(function (item) {
+          item.classList.toggle('is-active', item === button);
+        });
+
+        cards.forEach(function (card) {
+          var cardCategory = card.getAttribute('data-category') || 'all';
+          var shouldShow = filter === 'all' || cardCategory === filter;
+          card.classList.toggle('is-hidden', !shouldShow);
+        });
+      });
+    });
+  }
+
+  function initPricingToggle() {
+    var buttons = document.querySelectorAll('.pricing-toggle button');
+    var priceEls = document.querySelectorAll('.pricing-card__price');
+
+    if (!buttons.length || !priceEls.length) return;
+
+    buttons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        var mode = button.getAttribute('data-mode');
+
+        buttons.forEach(function (item) {
+          item.classList.toggle('is-active', item === button);
+        });
+
+        priceEls.forEach(function (priceEl) {
+          var value = priceEl.getAttribute(mode === 'yearly' ? 'data-yearly' : 'data-monthly');
+          if (value) {
+            priceEl.innerHTML = '<strong>' + value + '</strong><small>' + (mode === 'yearly' ? 'Billed annually' : 'Billed monthly') + '</small>';
+          }
+        });
+      });
+    });
+  }
+
   function initFormspreeForms() {
     var forms = document.querySelectorAll('.js-formspree');
 
@@ -211,13 +245,14 @@
     updateWhatsAppLink();
   }
 
-  // --- Initialize ---
   document.addEventListener('DOMContentLoaded', function () {
     initFadeAnimations();
     initSignupForm();
     initCardHoverGlow();
     initMainNav();
     initActiveNavLink();
+    initFilterControls();
+    initPricingToggle();
     initFormspreeForms();
     initOrderForm();
   });

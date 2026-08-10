@@ -3,50 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Avolo — The Future, Shipped Early | Automation Agency</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-  <meta name="description" content="Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep running after launch. Founded by Sourab Bachar in Odisha.">
-  <meta name="keywords" content="automation, AI chatbots, workflow automation, marketing automation, web development">
+  <title>Avolo — Automation for modern teams</title>
+  <meta name="description" content="Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep working after launch.">
   <meta name="author" content="Sourab Bachar">
   <link rel="canonical" href="https://avolo.in/">
-
-  <meta property="og:title" content="Avolo — The Future, Shipped Early">
-  <meta property="og:description" content="Avolo builds websites, bots, and workflows that keep running after launch. Not just launch-ready, built to save you hours every week.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://avolo.in/">
-  <meta property="og:image" content="https://avolo.in/og-image.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Avolo — The Future, Shipped Early">
-  <meta name="twitter:description" content="Avolo builds websites, bots, and workflows that keep running after launch. Not just launch-ready, built to save you hours every week.">
-  <meta name="twitter:image" content="https://avolo.in/og-image.png">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Avolo",
-    "url": "https://avolo.in",
-    "description": "Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep running after launch.",
-    "founder": {
-      "@type": "Person",
-      "name": "Sourab Bachar"
-    }
-  }
-  </script>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Ambient background effects -->
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
   <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
@@ -57,17 +23,17 @@
         <span class="logo__icon">◈</span>
         <span class="logo__text">Avolo</span>
       </a>
-
       <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
         <span class="nav__toggle-bar"></span>
       </button>
-
       <div class="nav__menu" id="nav-menu">
         <a href="index.html" class="nav__link">Home</a>
         <a href="services.html" class="nav__link">Services</a>
         <a href="about.html" class="nav__link">About</a>
+        <a href="work.html" class="nav__link">Work</a>
+        <a href="blog.html" class="nav__link">Blog</a>
         <a href="pricing.html" class="nav__link">Pricing</a>
         <a href="contact.html" class="nav__link">Contact</a>
         <a href="order.html" class="signup__btn nav__button">Start a Project <span class="signup__btn-icon">→</span></a>
@@ -76,90 +42,89 @@
   </header>
 
   <main>
-    <!-- Hero Section -->
-    <section class="hero fade-in" id="hero">
-      <p class="hero__eyebrow">Built in Odisha. Built for scale.</p>
-      <h1 class="hero__headline">The future,<br> shipped early.</h1>
-      <p class="hero__subtext">Most agencies sell you a website and disappear. We build the systems that keep running after we're gone — websites, bots, and workflows that actually save you hours every week.</p>
-      <p class="hero__founder">Founded by <strong>Sourab Bachar</strong></p>
+    <section class="hero fade-in">
+      <p class="hero__eyebrow">Built in Odisha. Built to scale.</p>
+      <h1 class="hero__headline">Automation that feels calm, clear, and reliable.</h1>
+      <p class="hero__subtext">We design fast websites, smart chatbots, and practical automations that quietly save hours every week without adding complexity.</p>
       <div class="hero__actions">
-        <a href="order.html" class="signup__btn hero__cta">Start a Project <span class="signup__btn-icon">→</span></a>
-        <a href="services.html" class="signup__btn hero__cta">View Services <span class="signup__btn-icon">→</span></a>
+        <a href="order.html" class="signup__btn">Start a Project <span class="signup__btn-icon">→</span></a>
+        <a href="services.html" class="button button--ghost">See Services</a>
+      </div>
+      <div class="trust-row" aria-label="Avolo highlights">
+        <span class="trust-pill">Fast launch cycles</span>
+        <span class="trust-pill">No fluff retainers</span>
+        <span class="trust-pill">Simple handoff</span>
       </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about fade-in" id="about">
-      <div class="about__container">
-        <span class="section-label">About</span>
-        <p class="about__text">
-          Avolo started with a simple frustration: small businesses spend more time on repetitive admin work than on the work that actually matters. So founder Sourab Bachar built Avolo to fix that — custom websites, AI chatbots that never sleep, and automation that quietly handles the busywork in the background. No bloated retainers, no jargon. Just systems that work.
-        </p>
+    <section class="stats-row fade-in" aria-label="Avolo stats">
+      <div class="stats-card">
+        <strong>24/7</strong>
+        <p>Lead capture and customer replies even when your team is offline.</p>
+      </div>
+      <div class="stats-card">
+        <strong>3x faster</strong>
+        <p>Operational follow-up for teams juggling sales, admin, and growth.</p>
+      </div>
+      <div class="stats-card">
+        <strong>Built to last</strong>
+        <p>Systems that are practical, documented, and easy to maintain.</p>
       </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services fade-in" id="services">
-      <span class="section-label">What We Build</span>
-      <h2 class="services__heading">Everything you need to scale</h2>
+    <section class="about fade-in">
+      <div class="split-section">
+        <div class="page-card">
+          <span class="section-label">Why Avolo</span>
+          <h2 class="section-heading">We turn busywork into calm, dependable operations.</h2>
+          <p class="section-copy">Avolo helps founders and small teams get a polished digital presence plus the behind-the-scenes automation that makes growth feel easier.</p>
+          <div class="feature-list">
+            <div class="feature-item">Clear websites that feel premium and load fast.</div>
+            <div class="feature-item">AI assistants that answer common questions without extra effort.</div>
+            <div class="feature-item">Automations that connect your tools and remove repetitive tasks.</div>
+          </div>
+        </div>
+        <div class="page-card">
+          <span class="section-label">Highlights</span>
+          <h3 class="section-heading">From first visit to repeat follow-up.</h3>
+          <p class="section-copy">Every rollout is designed to create momentum: discover, build, launch, and improve.</p>
+          <a href="work.html" class="button" style="margin-top:1rem;">Explore recent work</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="services fade-in">
+      <span class="section-label">What we build</span>
+      <h2 class="services__heading">Core services for growing businesses</h2>
       <div class="services__grid">
-        <a href="services.html#websites" class="card" id="service-websites">
-          <div class="card__icon-wrapper">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="4" y="6" width="16" height="11" rx="2"/>
-              <path d="M4 10h16"/>
-            </svg>
-          </div>
+        <a href="services.html#websites" class="card">
+          <div class="card__icon-wrapper">◈</div>
           <h3 class="card__title">Websites</h3>
-          <p class="card__desc">Not a template. A site built around how your customers actually decide to buy — fast, clean, and built to convert from day one.</p>
+          <p class="card__desc">Clean, conversion-ready websites that feel contemporary and stay easy to manage.</p>
         </a>
-
-        <a href="services.html#chatbots" class="card" id="service-chatbots">
-          <div class="card__icon-wrapper">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M6 8h12a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H9l-3 3V10a2 2 0 0 1 2-2z"/>
-            </svg>
-          </div>
-          <h3 class="card__title">AI Chatbots</h3>
-          <p class="card__desc">Answers customer questions at 2am, captures leads while you sleep, and never asks for a day off.</p>
+        <a href="services.html#chatbots" class="card">
+          <div class="card__icon-wrapper">✦</div>
+          <h3 class="card__title">AI chatbots</h3>
+          <p class="card__desc">Friendly assistants that handle FAQs, capture leads, and guide visitors.</p>
         </a>
-
-        <a href="services.html#workflow" class="card" id="service-workflow">
-          <div class="card__icon-wrapper">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M8 12a5 5 0 1 1 8-4.33"/>
-              <path d="M15.5 5.5v4h-4"/>
-            </svg>
-          </div>
-          <h3 class="card__title">Workflow Automation</h3>
-          <p class="card__desc">The repetitive five-minute task you do 40 times a week? We make it a zero-minute task.</p>
+        <a href="services.html#workflow" class="card">
+          <div class="card__icon-wrapper">⟳</div>
+          <h3 class="card__title">Workflow automation</h3>
+          <p class="card__desc">Automations that replace repeated handoffs with reliable flows that just work.</p>
         </a>
-
-        <a href="services.html#marketing" class="card" id="service-marketing">
-          <div class="card__icon-wrapper">
-            <svg class="card__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M6 15l4-4 3 3 5-5"/>
-              <path d="M17 6v5h-5"/>
-            </svg>
-          </div>
-          <h3 class="card__title">Marketing Automation</h3>
-          <p class="card__desc">Set it up once. Let it run campaigns, follow-ups, and reminders while you focus on the actual work.</p>
+        <a href="services.html#marketing" class="card">
+          <div class="card__icon-wrapper">↗</div>
+          <h3 class="card__title">Marketing automation</h3>
+          <p class="card__desc">Follow-up systems for campaigns, reminders, and nurture journeys that stay active.</p>
         </a>
-      </div>
-      <div class="hero__actions">
-        <a href="services.html" class="signup__btn hero__cta">See All Services <span class="signup__btn-icon">→</span></a>
       </div>
     </section>
   </main>
 
   <footer class="footer fade-in">
     <div class="footer__inner">
-      <p class="footer__copy">&copy; 2026 Avolo. All rights reserved.</p>
-      <p class="footer__contact">
-        <a href="tel:+917328060281" class="footer__phone">
-          <span class="footer__phone-icon">✆</span> +91 73280 60281
-        </a>
-      </p>
+      <p class="footer__copy">© 2026 Avolo. All rights reserved.</p>
+      <p class="footer__contact"><a href="tel:+917328060281" class="footer__phone">✆ +91 73280 60281</a></p>
       <p class="footer__founder">A venture by Sourab Bachar</p>
     </div>
   </footer>
