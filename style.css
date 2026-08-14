@@ -16,13 +16,14 @@
     
     /* Typography */
     --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-heading: 'Plus Jakarta Sans', var(--font-primary);
     
     /* Spacing */
     --sp-xs: 0.5rem;
     --sp-sm: 1rem;
     --sp-md: 2rem;
     --sp-lg: 4rem;
-    --sp-xl: 6rem;
+    --sp-xl: 8rem; /* Increased for premium whitespace */
     
     /* Border Radius */
     --radius-sm: 8px;
@@ -62,6 +63,7 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
     color: var(--clr-navy);
     font-weight: 700;
     line-height: 1.2;
@@ -560,6 +562,12 @@ img, svg {
 .service-link:hover {
     color: var(--clr-green-hover);
     transform: translateX(4px);
+}
+
+.service-card:hover {
+    border-color: var(--clr-green);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.06);
 }
 
 /* Feature List (Why Avolo, AI, Lead Gen) */
@@ -1208,32 +1216,91 @@ img, svg {
     right: 20px;
     width: 60px;
     height: 60px;
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: var(--clr-navy);
     color: var(--clr-white);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     z-index: 1000;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     cursor: grab;
     user-select: none;
     -webkit-user-drag: none;
 }
 
 .floating-ig svg {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
+    transition: transform 0.3s ease;
 }
 
 .floating-ig:hover {
-    transform: scale(1.1) translateY(-5px);
-    box-shadow: 0 8px 15px rgba(220, 39, 67, 0.4);
-    color: var(--clr-white);
+    transform: scale(1.05) translateY(-5px);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    box-shadow: 0 10px 20px rgba(220, 39, 67, 0.3);
+}
+
+.floating-ig:hover svg {
+    transform: scale(1.1);
+}
+
+/* Trust Marquee */
+.trust-marquee-wrapper {
+    overflow: hidden;
+    background: var(--clr-gray-bg);
+    padding: 3rem 0;
+    border-top: 1px solid var(--clr-border);
+    border-bottom: 1px solid var(--clr-border);
+    position: relative;
+}
+.trust-marquee-wrapper::before,
+.trust-marquee-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 150px;
+    z-index: 2;
+    pointer-events: none;
+}
+.trust-marquee-wrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--clr-gray-bg), transparent);
+}
+.trust-marquee-wrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--clr-gray-bg), transparent);
+}
+.trust-marquee-content {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+}
+.trust-marquee-item {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--clr-navy-light);
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
 }
 
 @media (max-width: 768px) {
+    :root {
+        --sp-xl: 5rem; /* Reduce spacing on mobile */
+    }
     .floating-ig {
         bottom: 15px;
         right: 15px;
