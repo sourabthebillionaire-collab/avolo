@@ -96,4 +96,95 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
+    // --- Draggable Floating Instagram Button ---
+    const igBtn = document.querySelector('.floating-ig');
+    if (igBtn) {
+        let isDragging = false;
+        let startX, startY, initialX, initialY;
+        let dragged = false;
+
+        // Restore position from localStorage
+        const savedLeft = localStorage.getItem('igBtnLeft');
+        const savedTop = localStorage.getItem('igBtnTop');
+        
+        if (savedLeft && savedTop) {
+            igBtn.style.bottom = 'auto';
+            igBtn.style.right = 'auto';
+            igBtn.style.left = savedLeft;
+            igBtn.style.top = savedTop;
+        }
+
+        const dragStart = (e) => {
+            if (e.type === 'touchstart') {
+                initialX = e.touches[0].clientX - igBtn.getBoundingClientRect().left;
+                initialY = e.touches[0].clientY - igBtn.getBoundingClientRect().top;
+            } else {
+                initialX = e.clientX - igBtn.getBoundingClientRect().left;
+                initialY = e.clientY - igBtn.getBoundingClientRect().top;
+            }
+
+            isDragging = true;
+            dragged = false;
+            igBtn.style.cursor = 'grabbing';
+            igBtn.style.transition = 'none'; // Disable transition for smooth dragging
+        };
+
+        const drag = (e) => {
+            if (!isDragging) return;
+            e.preventDefault(); // Prevent scrolling while dragging on mobile
+            dragged = true;
+
+            let currentX, currentY;
+            if (e.type === 'touchmove') {
+                currentX = e.touches[0].clientX - initialX;
+                currentY = e.touches[0].clientY - initialY;
+            } else {
+                currentX = e.clientX - initialX;
+                currentY = e.clientY - initialY;
+            }
+
+            // Keep within screen bounds
+            const maxX = window.innerWidth - igBtn.offsetWidth;
+            const maxY = window.innerHeight - igBtn.offsetHeight;
+            
+            currentX = Math.max(0, Math.min(currentX, maxX));
+            currentY = Math.max(0, Math.min(currentY, maxY));
+
+            igBtn.style.bottom = 'auto';
+            igBtn.style.right = 'auto';
+            igBtn.style.left = `${currentX}px`;
+            igBtn.style.top = `${currentY}px`;
+        };
+
+        const dragEnd = (e) => {
+            if (!isDragging) return;
+            isDragging = false;
+            igBtn.style.cursor = 'grab';
+            igBtn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease'; // Re-enable normal transitions
+
+            // Save position
+            if (dragged) {
+                localStorage.setItem('igBtnLeft', igBtn.style.left);
+                localStorage.setItem('igBtnTop', igBtn.style.top);
+            }
+        };
+
+        // Prevent click if it was dragged
+        igBtn.addEventListener('click', (e) => {
+            if (dragged) {
+                e.preventDefault();
+            }
+        });
+
+        // Mouse Events
+        igBtn.addEventListener('mousedown', dragStart);
+        document.addEventListener('mousemove', drag);
+        document.addEventListener('mouseup', dragEnd);
+
+        // Touch Events
+        igBtn.addEventListener('touchstart', dragStart, { passive: false });
+        document.addEventListener('touchmove', drag, { passive: false });
+        document.addEventListener('touchend', dragEnd);
+    }
+
 });

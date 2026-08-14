@@ -1217,6 +1217,9 @@ img, svg {
     box-shadow: 0 4px 10px rgba(0,0,0,0.2);
     z-index: 1000;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: grab;
+    user-select: none;
+    -webkit-user-drag: none;
 }
 
 .floating-ig svg {
