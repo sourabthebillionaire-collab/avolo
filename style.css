@@ -1200,3 +1200,45 @@ img, svg {
         transition-delay: 0s;
     }
 }
+
+/* Floating Instagram Button */
+.floating-ig {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: var(--clr-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 1000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.floating-ig svg {
+    width: 30px;
+    height: 30px;
+}
+
+.floating-ig:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 8px 15px rgba(220, 39, 67, 0.4);
+    color: var(--clr-white);
+}
+
+@media (max-width: 768px) {
+    .floating-ig {
+        bottom: 15px;
+        right: 15px;
+        width: 50px;
+        height: 50px;
+    }
+    .floating-ig svg {
+        width: 25px;
+        height: 25px;
+    }
+}
