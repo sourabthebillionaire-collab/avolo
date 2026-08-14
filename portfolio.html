@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Avolo</title>
-    <meta name="description" content="Learn more about Avolo, our mission, and the digital solutions we provide.">
+    <title>Portfolio | Avolo</title>
+    <meta name="description" content="View our portfolio of premium websites built for businesses, restaurants, and corporate agencies.">
     
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,9 +31,9 @@
             <nav class="nav-links" id="nav-links">
                 <a href="index.html" class="nav-link">Home</a>
                 <a href="services.html" class="nav-link">Services</a>
-                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="portfolio.html" class="nav-link" style="color: var(--clr-green);">Portfolio</a>
                 <a href="pricing.html" class="nav-link">Pricing</a>
-                <a href="about.html" class="nav-link" style="color: var(--clr-green);">About</a>
+                <a href="about.html" class="nav-link">About</a>
                 <a href="contact.html" class="nav-link">Contact</a>
             </nav>
             
@@ -66,43 +66,42 @@
 
     <main style="padding-top: 80px;">
         
-        <!-- About -->
-        <section class="about section-spacing" id="about">
-            <div class="container split-layout">
-                <div class="split-content fade-up">
-                    <div class="badge-subtle">ABOUT US</div>
-                    <h1 class="section-heading">We Are <span class="text-green">Avolo</span></h1>
-                    <p class="section-subtext text-left mb-4">
-                        Avolo is a digital agency helping businesses build a strong online presence with modern websites, automations, AI solutions and lead generation strategies.
-                    </p>
-                    <p class="section-subtext text-left">
-                        Our mission is simple — deliver high-quality digital solutions that drive real results. We focus on modern aesthetics, fast performance, and a user-first approach.
-                    </p>
-                    
-                    <div class="stats-grid mt-lg">
-                        <div class="stat-item">
-                            <h3 class="stat-num text-green">50+</h3>
-                            <p class="stat-text">Happy Clients</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-num text-green">100+</h3>
-                            <p class="stat-text">Projects Done</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-num text-green">2+</h3>
-                            <p class="stat-text">Years Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-num text-green">24/7</h3>
-                            <p class="stat-text">Support</p>
+        <!-- Portfolio -->
+        <section class="portfolio bg-light section-spacing" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <div class="badge-subtle">OUR WORK</div>
+                    <h1 class="section-heading">Websites We<br>Have <span class="text-green">Built</span></h1>
+                    <p class="section-subtext">Clean, modern and results-driven websites for businesses.</p>
+                </div>
+
+                <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div class="portfolio-card fade-up delay-1">
+                        <div class="portfolio-img bg-gray placeholder-restaurant"></div>
+                        <div class="portfolio-info">
+                            <h4>Restaurant Website</h4>
+                            <p>Food & Restaurant</p>
                         </div>
                     </div>
-                </div>
-                <div class="split-visual fade-up delay-1">
-                    <div class="about-image-placeholder">
-                        <div class="laptop-mockup">
-                            <div class="screen">avolo.in</div>
-                            <div class="base"></div>
+                    <div class="portfolio-card fade-up delay-2">
+                        <div class="portfolio-img bg-gray placeholder-gym"></div>
+                        <div class="portfolio-info">
+                            <h4>Gym Website</h4>
+                            <p>Health & Fitness</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-card fade-up delay-3">
+                        <div class="portfolio-img bg-gray placeholder-corporate"></div>
+                        <div class="portfolio-info">
+                            <h4>Corporate Website</h4>
+                            <p>Business & Agency</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-card fade-up delay-4">
+                        <div class="portfolio-img bg-gray placeholder-ecommerce"></div>
+                        <div class="portfolio-info">
+                            <h4>E-Commerce Store</h4>
+                            <p>Retail</p>
                         </div>
                     </div>
                 </div>

@@ -1,115 +1,213 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Pricing | Avolo</title>
-  <meta name="description" content="Avolo pricing is project-based — your one-time build cost depends on scope, plus a simple flat monthly maintenance fee to keep everything running.">
-  <meta name="author" content="Sourab Bachar">
-  <link rel="canonical" href="https://avolo.in/pricing.html">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing | Avolo</title>
+    <meta name="description" content="Simple and transparent pricing packages for website design, business automation, and digital growth.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
 
-  <header class="header fade-in">
-    <nav class="nav" aria-label="Main navigation">
-      <a href="index.html" class="logo" aria-label="Avolo Home">
-        <span class="logo__icon">◈</span>
-        <span class="logo__text">Avolo</span>
-      </a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-      <div class="nav__menu" id="nav-menu">
-        <a href="index.html" class="nav__link">Home</a>
-        <a href="services.html" class="nav__link">Services</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="work.html" class="nav__link">Work</a>
-        <a href="blog.html" class="nav__link">Blog</a>
-        <a href="pricing.html" class="nav__link is-active">Pricing</a>
-        <a href="contact.html" class="nav__link">Contact</a>
-        <a href="order.html" class="signup__btn nav__button">Start a Project <span class="signup__btn-icon">→</span></a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero fade-in">
-      <p class="hero__eyebrow">Pricing</p>
-      <h1 class="hero__headline">Pricing that matches what you're actually building.</h1>
-      <p class="hero__subtext">We don't do one-size-fits-all packages. Your build cost depends on what you need — the site, the chatbot, the automations. Once it's live, a simple flat monthly fee keeps everything running.</p>
-    </section>
-
-    <section class="about fade-in">
-      <div class="split-section">
-        <div class="page-card">
-          <span class="section-label">One-time cost</span>
-          <h2 class="section-heading">Project cost — depends on scope</h2>
-          <p class="section-copy">This is what you pay once, to design and build your website, chatbot, or automation. There's no fixed number because a 3-page site and a 12-page site with a booking system aren't the same job — so we quote based on what you actually need.</p>
-          <div class="feature-list">
-            <div class="feature-item">Number of pages and design complexity</div>
-            <div class="feature-item">Chatbot depth — simple FAQ bot vs. full lead-qualification flow</div>
-            <div class="feature-item">How many tools/systems need to connect (CRM, WhatsApp, email, etc.)</div>
-            <div class="feature-item">Whether you need copywriting or content help included</div>
-          </div>
-          <a href="order.html" class="button" style="margin-top:1rem;">Get a Custom Quote</a>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="index.html" class="logo">
+                <img src="/android-chrome-512x512.png" alt="Avolo Logo" style="width: 32px; height: 32px; border-radius: 4px;">
+                avolo<span class="text-green">.in</span>
+            </a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services.html" class="nav-link">Services</a>
+                <a href="portfolio.html" class="nav-link">Portfolio</a>
+                <a href="pricing.html" class="nav-link" style="color: var(--clr-green);">Pricing</a>
+                <a href="about.html" class="nav-link">About</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="https://wa.me/917328060281" class="btn btn-primary btn-icon">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
+    </header>
 
-        <div class="page-card">
-          <span class="section-label">Ongoing</span>
-          <h2 class="section-heading">Monthly maintenance — from ₹[PRICE]/month</h2>
-          <p class="section-copy">Once your project is live, a flat monthly fee keeps it running smoothly — no separate invoices for every small fix.</p>
-          <div class="feature-list">
-            <div class="feature-item">Hosting, uptime monitoring, and backups</div>
-            <div class="feature-item">Security updates and routine checks</div>
-            <div class="feature-item">Small content updates and minor fixes</div>
-            <div class="feature-item">Priority support if something breaks</div>
-          </div>
-          <a href="contact.html" class="button button--ghost" style="margin-top:1rem;">Ask About Maintenance</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="pricing-section fade-in">
-      <span class="section-label">How it works</span>
-      <h2 class="services__heading">Three steps, no surprises</h2>
-      <div class="services__grid">
-        <div class="card">
-          <div class="card__icon-wrapper">1</div>
-          <h3 class="card__title">Tell us what you need</h3>
-          <p class="card__desc">Fill out a quick project form — what you're building, what problem it solves.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon-wrapper">2</div>
-          <h3 class="card__title">Get a fixed quote</h3>
-          <p class="card__desc">We scope the work and give you one clear number — no hourly billing surprises.</p>
-        </div>
-        <div class="card">
-          <div class="card__icon-wrapper">3</div>
-          <h3 class="card__title">Launch, then maintain</h3>
-          <p class="card__desc">Once it's live, the flat monthly fee keeps it running — you don't have to think about it.</p>
-        </div>
-      </div>
-      <p class="pricing-note" style="margin-top:1.5rem;">Every quote is tailored to your project — get in touch and we'll walk you through the numbers.</p>
-    </section>
-  </main>
-
-  <footer class="footer fade-in">
-    <div class="footer__inner">
-      <p class="footer__copy">© 2026 Avolo. All rights reserved.</p>
-      <p class="footer__contact"><a href="tel:+917328060281" class="footer__phone">✆ +91 73280 60281</a></p>
-      <p class="footer__founder">A venture by Sourab Bachar</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="index.html" class="mobile-link">Home</a>
+            <a href="services.html" class="mobile-link">Services</a>
+            <a href="portfolio.html" class="mobile-link">Portfolio</a>
+            <a href="pricing.html" class="mobile-link">Pricing</a>
+            <a href="about.html" class="mobile-link">About</a>
+            <a href="contact.html" class="mobile-link">Contact</a>
+            <a href="https://wa.me/917328060281" class="btn btn-primary mt-4">Chat on WhatsApp</a>
+        </nav>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <main style="padding-top: 80px;">
+        
+        <!-- Pricing -->
+        <section class="pricing section-spacing" id="pricing">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <div class="badge-subtle">PRICING</div>
+                    <h1 class="section-heading">Simple <span class="text-green">Pricing</span>, Powerful Results</h1>
+                    <p class="section-subtext">Choose the perfect plan for your business.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card fade-up delay-1">
+                        <div class="plan-badge">Basic</div>
+                        <div class="plan-price">₹3,999</div>
+                        <hr class="plan-divider">
+                        <ul class="plan-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Domain Name</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Hosting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Dynamic Website Design</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Business Email id</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp_call Integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SSL Certificate</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Whatsapp Button</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Social Media Integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Standard Plan -->
+                    <div class="pricing-card popular fade-up delay-2">
+                        <div class="plan-badge badge-yellow">Standard</div>
+                        <div class="plan-price">₹8,999</div>
+                        <hr class="plan-divider">
+                        <ul class="plan-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Domain Name</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Hosting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 15 Pages (Dynamic Website)</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 10 Business Email id</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp_call Integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SSL Certificate</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Admin Panel Access</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Payment Gateway Integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- PRO Plan -->
+                    <div class="pricing-card fade-up delay-3">
+                        <div class="plan-badge">PRO</div>
+                        <div class="plan-price">₹12,999</div>
+                        <hr class="plan-divider">
+                        <ul class="plan-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Domain Name</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Hosting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 25 Pages (Dynamic Website)</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 10 Business Email id</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp_call Integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SSL Certificate</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Admin Panel Access</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> C-Panel Access</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-lg fade-up delay-4">
+                    <a href="https://wa.me/917328060281" class="btn btn-outline btn-lg btn-icon mx-auto">
+                        <svg class="icon text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="logo">
+                        <img src="/android-chrome-512x512.png" alt="Avolo Logo" style="width: 32px; height: 32px; border-radius: 4px;">
+                        avolo<span class="text-green">.in</span>
+                    </a>
+                    <p class="footer-tagline">Building Digital Presence.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5 class="footer-title">Our Services</h5>
+                    <ul>
+                        <li><a href="services.html">Websites</a></li>
+                        <li><a href="services.html">Business Automation</a></li>
+                        <li><a href="services.html">AI Solutions</a></li>
+                        <li><a href="services.html">Lead Generation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p>Get tips, updates and insights straight to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 avolo.in | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
