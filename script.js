@@ -273,4 +273,60 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
+    // --- Animated Number Counters ---
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const target = entry.target;
+                const endVal = parseInt(target.getAttribute('data-target'));
+                let currentVal = 0;
+                const increment = endVal / 40;
+                const updateCounter = () => {
+                    currentVal += increment;
+                    if (currentVal < endVal) {
+                        target.innerText = Math.ceil(currentVal);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        target.innerText = endVal;
+                    }
+                };
+                updateCounter();
+                observer.unobserve(target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(counter => counterObserver.observe(counter));
+
+    // --- Magnetic Buttons ---
+    const magneticButtons = document.querySelectorAll('.btn:not(.theme-toggle)');
+    magneticButtons.forEach(btn => {
+        btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left - rect.width / 2;
+            const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+            btn.style.transform = `translate(0px, 0px)`;
+        });
+    });
+
+    // --- Pricing Estimator ---
+    const estCheckboxes = document.querySelectorAll('.estimator-box input[type="checkbox"]');
+    const estTotalDisplay = document.getElementById('est-total');
+    if (estCheckboxes.length > 0 && estTotalDisplay) {
+        let basePrice = 20000;
+        const updateTotal = () => {
+            let total = basePrice;
+            estCheckboxes.forEach(box => {
+                if(box.checked) total += parseInt(box.value);
+            });
+            estTotalDisplay.innerText = total.toLocaleString('en-IN');
+        };
+        estCheckboxes.forEach(box => box.addEventListener('change', updateTotal));
+        updateTotal();
+    }
+
 });

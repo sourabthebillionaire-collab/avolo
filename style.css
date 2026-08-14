@@ -1034,9 +1034,15 @@ img, svg {
 
 /* Testimonials */
 .testimonials-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
     gap: 2rem;
+    padding-bottom: 2rem;
+    scrollbar-width: none; /* Firefox */
+}
+.testimonials-grid::-webkit-scrollbar {
+    display: none; /* Safari/Chrome */
 }
 
 .testimonial-card {
@@ -1044,6 +1050,9 @@ img, svg {
     padding: 2rem;
     border-radius: var(--radius-md);
     border: 1px solid var(--clr-border);
+    min-width: 320px;
+    flex-shrink: 0;
+    scroll-snap-align: center;
 }
 
 .stars { color: #f59e0b; margin-bottom: 1rem; letter-spacing: 2px; }
