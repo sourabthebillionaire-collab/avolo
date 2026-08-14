@@ -1,166 +1,659 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>Avolo — Automation for modern teams</title>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/android-chrome-512x512.png">
-  <meta name="description" content="Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep working after launch.">
-  <meta name="author" content="Sourab Bachar">
-  <link rel="canonical" href="https://avolo.in/">
-
-  <meta property="og:title" content="Avolo — Automation for modern teams">
-  <meta property="og:description" content="Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep working after launch.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://avolo.in/">
-  <meta property="og:image" content="https://avolo.in/og-image.png">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Avolo — Automation for modern teams">
-  <meta name="twitter:description" content="Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep working after launch.">
-  <meta name="twitter:image" content="https://avolo.in/og-image.png">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Avolo",
-    "url": "https://avolo.in",
-    "description": "Avolo builds websites, AI chatbots, workflow automation, and marketing systems that keep working after launch.",
-    "founder": {
-      "@type": "Person",
-      "name": "Sourab Bachar"
-    }
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avolo | Digital Agency - Websites, Automation, AI & Lead Generation</title>
+    <meta name="description" content="Avolo is a modern digital agency providing premium website design, business automation, custom AI solutions, and lead generation to grow your business online.">
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Favicon placeholder (can be updated later) -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>A</text></svg>">
 </head>
 <body>
-  <div class="bg-grid" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
-  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
 
-  <header class="header fade-in">
-    <nav class="nav" aria-label="Main navigation">
-      <a href="index.html" class="logo" aria-label="Avolo Home">
-        <span class="logo__icon">◈</span>
-        <span class="logo__text">Avolo</span>
-      </a>
-      <button class="nav__toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Toggle navigation">
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-        <span class="nav__toggle-bar"></span>
-      </button>
-      <div class="nav__menu" id="nav-menu">
-        <a href="index.html" class="nav__link is-active">Home</a>
-        <a href="services.html" class="nav__link">Services</a>
-        <a href="about.html" class="nav__link">About</a>
-        <a href="work.html" class="nav__link">Work</a>
-        <a href="blog.html" class="nav__link">Blog</a>
-        <a href="pricing.html" class="nav__link">Pricing</a>
-        <a href="contact.html" class="nav__link">Contact</a>
-        <a href="order.html" class="signup__btn nav__button">Start a Project <span class="signup__btn-icon">→</span></a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero fade-in">
-      <p class="hero__eyebrow">Built in Odisha. Built to scale.</p>
-      <h1 class="hero__headline">Automation that feels calm, clear, and reliable.</h1>
-      <p class="hero__subtext">We design fast websites, smart chatbots, and practical automations that quietly save hours every week without adding complexity.</p>
-      <div class="hero__actions">
-        <a href="order.html" class="signup__btn">Start a Project <span class="signup__btn-icon">→</span></a>
-        <a href="services.html" class="button button--ghost">See Services</a>
-      </div>
-      <div class="trust-row" aria-label="Avolo highlights">
-        <span class="trust-pill">Fast launch cycles</span>
-        <span class="trust-pill">No fluff retainers</span>
-        <span class="trust-pill">Simple handoff</span>
-      </div>
-    </section>
-
-    <section class="stats-row fade-in" aria-label="Avolo stats">
-      <div class="stats-card">
-        <strong>24/7</strong>
-        <p>Lead capture and customer replies even when your team is offline.</p>
-      </div>
-      <div class="stats-card">
-        <strong>3x faster</strong>
-        <p>Operational follow-up for teams juggling sales, admin, and growth.</p>
-      </div>
-      <div class="stats-card">
-        <strong>Built to last</strong>
-        <p>Systems that are practical, documented, and easy to maintain.</p>
-      </div>
-    </section>
-
-    <section class="about fade-in">
-      <div class="split-section">
-        <div class="page-card">
-          <span class="section-label">Why Avolo</span>
-          <h2 class="section-heading">We turn busywork into calm, dependable operations.</h2>
-          <p class="section-copy">Avolo helps founders and small teams get a polished digital presence plus the behind-the-scenes automation that makes growth feel easier.</p>
-          <div class="feature-list">
-            <div class="feature-item">Clear websites that feel premium and load fast.</div>
-            <div class="feature-item">AI assistants that answer common questions without extra effort.</div>
-            <div class="feature-item">Automations that connect your tools and remove repetitive tasks.</div>
-          </div>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-mark">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path><line x1="4" y1="22" x2="4" y2="15"></line></svg>
+                </span>
+                avolo<span class="text-green">.in</span>
+            </a>
+            
+            <nav class="nav-links" id="nav-links">
+                <a href="#hero" class="nav-link">Home</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+            
+            <div class="header-actions">
+                <a href="https://wa.me/917328060281" class="btn btn-primary btn-icon">
+                    <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                    <span>Chat on WhatsApp</span>
+                </a>
+                <button class="hamburger" id="hamburger" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </div>
-        <div class="page-card">
-          <span class="section-label">Highlights</span>
-          <h3 class="section-heading">From first visit to repeat follow-up.</h3>
-          <p class="section-copy">Every rollout is designed to create momentum: discover, build, launch, and improve.</p>
-          <a href="work.html" class="button" style="margin-top:1rem;">Explore recent work</a>
-        </div>
-      </div>
-    </section>
+    </header>
 
-    <section class="services fade-in">
-      <span class="section-label">What we build</span>
-      <h2 class="services__heading">Core services for growing businesses</h2>
-      <div class="services__grid">
-        <a href="services.html#websites" class="card">
-          <div class="card__icon-wrapper">◈</div>
-          <h3 class="card__title">Websites</h3>
-          <p class="card__desc">Clean, conversion-ready websites that feel contemporary and stay easy to manage.</p>
-        </a>
-        <a href="services.html#chatbots" class="card">
-          <div class="card__icon-wrapper">✦</div>
-          <h3 class="card__title">AI chatbots</h3>
-          <p class="card__desc">Friendly assistants that handle FAQs, capture leads, and guide visitors.</p>
-        </a>
-        <a href="services.html#workflow" class="card">
-          <div class="card__icon-wrapper">⟳</div>
-          <h3 class="card__title">Workflow automation</h3>
-          <p class="card__desc">Automations that replace repeated handoffs with reliable flows that just work.</p>
-        </a>
-        <a href="services.html#marketing" class="card">
-          <div class="card__icon-wrapper">↗</div>
-          <h3 class="card__title">Marketing automation</h3>
-          <p class="card__desc">Follow-up systems for campaigns, reminders, and nurture journeys that stay active.</p>
-        </a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer fade-in">
-    <div class="footer__inner">
-      <p class="footer__copy">© 2026 Avolo. All rights reserved.</p>
-      <p class="footer__contact"><a href="tel:+917328060281" class="footer__phone">✆ +91 73280 60281</a></p>
-      <p class="footer__founder">A venture by Sourab Bachar</p>
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <nav class="mobile-nav">
+            <a href="#hero" class="mobile-link">Home</a>
+            <a href="#services" class="mobile-link">Services</a>
+            <a href="#pricing" class="mobile-link">Pricing</a>
+            <a href="#portfolio" class="mobile-link">Portfolio</a>
+            <a href="#about" class="mobile-link">About</a>
+            <a href="#contact" class="mobile-link">Contact</a>
+            <a href="https://wa.me/917328060281" class="btn btn-primary mt-4">Chat on WhatsApp</a>
+        </nav>
     </div>
-  </footer>
 
-  <script src="script.js"></script>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero section-spacing" id="hero">
+            <div class="container hero-container">
+                <div class="hero-content fade-up">
+                    <div class="badge">BUILDING DIGITAL PRESENCE</div>
+                    <h1 class="hero-heading">
+                        We Build Websites That <span class="text-green">Grow</span> Your Business.
+                    </h1>
+                    <p class="hero-subtext">
+                        Websites, Automations, AI Solutions & Lead Generation that help you get more customers and grow faster.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="https://wa.me/917328060281" class="btn btn-primary btn-icon btn-lg">
+                            <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                            <span>Chat on WhatsApp</span>
+                        </a>
+                        <a href="#services" class="btn btn-outline btn-lg">Explore Services</a>
+                    </div>
+                    <div class="hero-trust-features">
+                        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Modern Design</span>
+                        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly</span>
+                        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Fast & Secure</span>
+                        <span class="trust-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive</span>
+                    </div>
+                </div>
+                <div class="hero-visual fade-up delay-1">
+                    <div class="mockup-placeholder">
+                        <div class="mockup-browser">
+                            <div class="mockup-header"><span></span><span></span><span></span></div>
+                            <div class="mockup-body">
+                                <div class="mockup-wireframe"></div>
+                            </div>
+                        </div>
+                        <div class="mockup-mobile">
+                            <div class="mockup-mobile-screen"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="services bg-light section-spacing" id="services">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <div class="badge-subtle">OUR SERVICES</div>
+                    <h2 class="section-heading">Complete <span class="text-green">Digital Solutions</span><br>For Your Business</h2>
+                    <p class="section-subtext">Everything you need to build, automate and grow your business online.</p>
+                </div>
+
+                <div class="services-grid">
+                    <div class="service-card fade-up delay-1">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3 class="service-title">Websites</h3>
+                        <p class="service-desc">High-quality responsive websites designed to convert visitors into customers.</p>
+                        <a href="#contact" class="service-link">Learn more &rarr;</a>
+                    </div>
+                    
+                    <div class="service-card fade-up delay-2">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                        </div>
+                        <h3 class="service-title">Business Automation</h3>
+                        <p class="service-desc">Automate repetitive workflows, save time and increase productivity.</p>
+                        <a href="#contact" class="service-link">Learn more &rarr;</a>
+                    </div>
+
+                    <div class="service-card fade-up delay-3">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 16v-4"></path><path d="M12 8h.01"></path></svg>
+                        </div>
+                        <h3 class="service-title">AI Solutions</h3>
+                        <p class="service-desc">Custom AI solutions designed to solve business problems and improve efficiency.</p>
+                        <a href="#contact" class="service-link">Learn more &rarr;</a>
+                    </div>
+
+                    <div class="service-card fade-up delay-4">
+                        <div class="service-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                        </div>
+                        <h3 class="service-title">Lead Generation</h3>
+                        <p class="service-desc">Generate high-quality leads and grow your customer pipeline consistently.</p>
+                        <a href="#contact" class="service-link">Learn more &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Avolo -->
+        <section class="why-avolo section-spacing" id="why">
+            <div class="container split-layout">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">WHY CHOOSE AVOLO?</div>
+                    <h2 class="section-heading">We Build <span class="text-green">More</span> Than Just Websites</h2>
+                    <p class="section-subtext text-left">We focus on performance, user experience and results.</p>
+                    
+                    <ul class="feature-list">
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Modern & Premium Design</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Mobile First Approach</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Optimization</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Secure & Fast Loading</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Easy to Manage</li>
+                        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Support When You Need It</li>
+                    </ul>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <div class="dashboard-mockup">
+                        <div class="dashboard-header">Business Growth Starts With A Website</div>
+                        <div class="dashboard-chart">
+                            <svg viewBox="0 0 100 40" class="chart-line">
+                                <path d="M0 30 Q 15 30, 25 20 T 50 25 T 75 10 T 100 15" fill="none" stroke="#16A34A" stroke-width="2" />
+                            </svg>
+                            <div class="stat-box">
+                                <span class="stat-label">Visitors</span>
+                                <span class="stat-value">24.6K</span>
+                                <span class="stat-trend">+15.4%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing -->
+        <section class="pricing bg-light section-spacing" id="pricing">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <div class="badge-subtle">PRICING</div>
+                    <h2 class="section-heading">Simple <span class="text-green">Pricing</span>, Powerful Results</h2>
+                    <p class="section-subtext">Choose the perfect plan for your business.</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Basic Plan -->
+                    <div class="pricing-card fade-up delay-1">
+                        <div class="plan-badge">Basic</div>
+                        <div class="plan-price">₹3,999</div>
+                        <hr class="plan-divider">
+                        <ul class="plan-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Domain Name</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Hosting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Dynamic Website Design</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Business Email id</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp_call Integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SSL Certificate</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Whatsapp Button</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Social Media Integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- Standard Plan -->
+                    <div class="pricing-card popular fade-up delay-2">
+                        <div class="plan-badge badge-yellow">Standard</div>
+                        <div class="plan-price">₹8,999</div>
+                        <hr class="plan-divider">
+                        <ul class="plan-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Domain Name</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Hosting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 15 Pages (Dynamic Website)</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 10 Business Email id</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp_call Integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SSL Certificate</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Admin Panel Access</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Payment Gateway Integration</li>
+                        </ul>
+                    </div>
+
+                    <!-- PRO Plan -->
+                    <div class="pricing-card fade-up delay-3">
+                        <div class="plan-badge">PRO</div>
+                        <div class="plan-price">₹12,999</div>
+                        <hr class="plan-divider">
+                        <ul class="plan-features">
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Domain Name</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 1 Free Hosting</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 25 Pages (Dynamic Website)</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 10 Business Email id</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> 100% Responsive Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SEO Friendly Website</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> WhatsApp_call Integration</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> SSL Certificate</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> Admin Panel Access</li>
+                            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="20 6 9 17 4 12"></polyline></svg> C-Panel Access</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="text-center mt-lg fade-up delay-4">
+                    <a href="https://wa.me/917328060281" class="btn btn-outline btn-lg btn-icon mx-auto">
+                        <svg class="icon text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section class="portfolio section-spacing" id="portfolio">
+            <div class="container split-layout">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">OUR WORK</div>
+                    <h2 class="section-heading">Websites We<br>Have <span class="text-green">Built</span></h2>
+                    <p class="section-subtext text-left">Clean, modern and results-driven websites for businesses.</p>
+                    <a href="#contact" class="btn btn-primary mt-4">View All Projects</a>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <div class="portfolio-grid">
+                        <div class="portfolio-card">
+                            <div class="portfolio-img bg-gray placeholder-restaurant"></div>
+                            <div class="portfolio-info">
+                                <h4>Restaurant Website</h4>
+                                <p>Food & Restaurant</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="portfolio-img bg-gray placeholder-gym"></div>
+                            <div class="portfolio-info">
+                                <h4>Gym Website</h4>
+                                <p>Health & Fitness</p>
+                            </div>
+                        </div>
+                        <div class="portfolio-card">
+                            <div class="portfolio-img bg-gray placeholder-corporate"></div>
+                            <div class="portfolio-info">
+                                <h4>Corporate Website</h4>
+                                <p>Business & Agency</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section class="process bg-light section-spacing" id="process">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <div class="badge-subtle">OUR PROCESS</div>
+                    <h2 class="section-heading">Our <span class="text-green">Simple</span> 4-Step Process</h2>
+                    <p class="section-subtext">We follow a proven process to deliver the best results.</p>
+                </div>
+
+                <div class="process-steps">
+                    <div class="process-line"></div>
+                    
+                    <div class="step fade-up delay-1">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                        </div>
+                        <h4>1. Discover</h4>
+                        <p>We understand your business, goals and requirements.</p>
+                    </div>
+
+                    <div class="step fade-up delay-2">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        </div>
+                        <h4>2. Plan</h4>
+                        <p>We plan the structure, features and design for your project.</p>
+                    </div>
+
+                    <div class="step fade-up delay-3">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                        </div>
+                        <h4>3. Build</h4>
+                        <p>We design, develop and test everything to perfection.</p>
+                    </div>
+
+                    <div class="step fade-up delay-4">
+                        <div class="step-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <h4>4. Deliver</h4>
+                        <p>We launch your website and provide ongoing support.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Solutions -->
+        <section class="ai-solutions section-spacing" id="ai">
+            <div class="container split-layout">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">AI SOLUTIONS</div>
+                    <h2 class="section-heading">Smarter Solutions With <span class="text-green">AI</span></h2>
+                    <p class="section-subtext text-left">Leverage the power of Artificial Intelligence to automate tasks, analyze data and grow faster.</p>
+                    
+                    <ul class="feature-list no-icon">
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> AI Chatbots</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Data Analysis</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Predictive Insights</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Process Automation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary mt-4">Explore AI Solutions</a>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <div class="visual-card">
+                        <div class="vc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
+                        <div class="vc-text">
+                            <h5>Data Insights</h5>
+                            <p>Smart decisions</p>
+                        </div>
+                    </div>
+                    <div class="visual-card offset">
+                        <div class="vc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
+                        <div class="vc-text">
+                            <h5>Automation</h5>
+                            <p>Save time & cost</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Business Automation -->
+        <section class="automation bg-light section-spacing" id="automation">
+            <div class="container split-layout reverse">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">BUSINESS AUTOMATION</div>
+                    <h2 class="section-heading">Automate. Save Time.<br><span class="text-green">Scale Faster.</span></h2>
+                    <p class="section-subtext text-left">We automate your repetitive tasks so you can focus on growth.</p>
+                    
+                    <ul class="feature-list no-icon">
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Workflow Automation</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> WhatsApp Automation</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Email Automation</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> CRM Automation</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary mt-4">Explore Automation</a>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <div class="workflow-diagram">
+                        <div class="wf-node">New Lead</div>
+                        <div class="wf-arrow">&darr;</div>
+                        <div class="wf-node highlight">Automation</div>
+                        <div class="wf-arrow split"></div>
+                        <div class="wf-row">
+                            <div class="wf-node small">WhatsApp Message</div>
+                            <div class="wf-node small">Email Follow-up</div>
+                            <div class="wf-node small">CRM Update</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Generation -->
+        <section class="lead-gen section-spacing" id="lead-gen">
+            <div class="container split-layout">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">LEAD GENERATION</div>
+                    <h2 class="section-heading">More Leads.<br>More Customers.<br>More <span class="text-green">Growth.</span></h2>
+                    <p class="section-subtext text-left">We help you generate high-quality leads that convert into paying customers.</p>
+                    
+                    <ul class="feature-list no-icon">
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Targeted Lead Generation</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> High-Quality Leads</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Better Conversion</li>
+                        <li><span class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg></span> Business Growth</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary mt-4">Get More Leads</a>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <div class="funnel-diagram">
+                        <div class="funnel-layer layer-1">Attract</div>
+                        <div class="funnel-layer layer-2">Nurture</div>
+                        <div class="funnel-layer layer-3">Convert</div>
+                        <div class="funnel-result">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section class="about bg-light section-spacing" id="about">
+            <div class="container split-layout">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">ABOUT US</div>
+                    <h2 class="section-heading">We Are <span class="text-green">Avolo</span></h2>
+                    <p class="section-subtext text-left mb-4">
+                        Avolo is a digital agency helping businesses build a strong online presence with modern websites, automations, AI solutions and lead generation strategies.
+                    </p>
+                    <p class="section-subtext text-left">
+                        Our mission is simple — deliver high-quality digital solutions that drive real results.
+                    </p>
+                    
+                    <div class="stats-grid mt-lg">
+                        <div class="stat-item">
+                            <h3 class="stat-num text-green">50+</h3>
+                            <p class="stat-text">Happy Clients</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-num text-green">100+</h3>
+                            <p class="stat-text">Projects Done</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-num text-green">2+</h3>
+                            <p class="stat-text">Years Experience</p>
+                        </div>
+                        <div class="stat-item">
+                            <h3 class="stat-num text-green">24/7</h3>
+                            <p class="stat-text">Support</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <div class="about-image-placeholder">
+                        <div class="laptop-mockup">
+                            <div class="screen">avolo.in</div>
+                            <div class="base"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section class="testimonials section-spacing" id="testimonials">
+            <div class="container">
+                <div class="section-header text-center fade-up">
+                    <div class="badge-subtle">TESTIMONIALS</div>
+                    <h2 class="section-heading">What Our <span class="text-green">Clients</span> Say</h2>
+                </div>
+
+                <div class="testimonials-grid">
+                    <div class="testimonial-card fade-up delay-1">
+                        <div class="stars">★★★★★</div>
+                        <p class="t-quote">"Avolo built an amazing website for our business. We got more customers and more growth!"</p>
+                        <div class="t-author">
+                            <div class="t-avatar bg-gray"></div>
+                            <div>
+                                <h5>Rahul Sharma</h5>
+                                <span>Restaurant Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-up delay-2">
+                        <div class="stars">★★★★★</div>
+                        <p class="t-quote">"Their automation solutions saved us so much time and improved our workflow."</p>
+                        <div class="t-author">
+                            <div class="t-avatar bg-gray"></div>
+                            <div>
+                                <h5>Anita Verma</h5>
+                                <span>Business Owner</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card fade-up delay-3">
+                        <div class="stars">★★★★★</div>
+                        <p class="t-quote">"Professional team, great support and quality work. Highly recommended!"</p>
+                        <div class="t-author">
+                            <div class="t-avatar bg-gray"></div>
+                            <div>
+                                <h5>Vikram Singh</h5>
+                                <span>Marketing Head</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center mt-lg fade-up delay-4">
+                    <a href="https://wa.me/917328060281" class="btn btn-outline btn-icon mx-auto">
+                        <svg class="icon text-green" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        <span>Chat on WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact bg-light section-spacing" id="contact">
+            <div class="container split-layout">
+                <div class="split-content fade-up">
+                    <div class="badge-subtle">CONTACT US</div>
+                    <h2 class="section-heading">Let's Build Something<br>Amazing <span class="text-green">Together</span></h2>
+                    <p class="section-subtext text-left mb-4">Have a project in mind? Let's talk.</p>
+                    
+                    <div class="contact-info">
+                        <div class="c-item">
+                            <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
+                            <div>
+                                <p class="c-label">Chat on WhatsApp</p>
+                                <p class="c-value">+91 73280 60281</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
+                            <div>
+                                <p class="c-label">Email Us</p>
+                                <p class="c-value">hello@avolo.in</p>
+                            </div>
+                        </div>
+                        <div class="c-item">
+                            <div class="c-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
+                            <div>
+                                <p class="c-label">Our Location</p>
+                                <p class="c-value">India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="split-visual fade-up delay-1">
+                    <form class="contact-form" onsubmit="event.preventDefault();">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        avolo<span class="text-green">.in</span>
+                    </a>
+                    <p class="footer-tagline">Building Digital Presence.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+                        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></a>
+                        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                        <a href="#" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg></a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h5 class="footer-title">Quick Links</h5>
+                    <ul>
+                        <li><a href="#hero">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5 class="footer-title">Our Services</h5>
+                    <ul>
+                        <li><a href="#">Websites</a></li>
+                        <li><a href="#">Business Automation</a></li>
+                        <li><a href="#">AI Solutions</a></li>
+                        <li><a href="#">Lead Generation</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5 class="footer-title">Legal</h5>
+                    <ul>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Refund Policy</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p>Get tips, updates and insights straight to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 avolo.in | All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
