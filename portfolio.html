@@ -11,6 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Dark Mode Anti-Flash Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
@@ -77,28 +84,28 @@
 
                 <div class="portfolio-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
                     <div class="portfolio-card fade-up delay-1">
-                        <div class="portfolio-img bg-gray placeholder-restaurant"></div>
+                        <div class="portfolio-img" style="background-image: url('portfolio_restaurant.png');"></div>
                         <div class="portfolio-info">
                             <h4>Restaurant Website</h4>
                             <p>Food & Restaurant</p>
                         </div>
                     </div>
                     <div class="portfolio-card fade-up delay-2">
-                        <div class="portfolio-img bg-gray placeholder-gym"></div>
+                        <div class="portfolio-img" style="background-image: url('portfolio_gym.png');"></div>
                         <div class="portfolio-info">
                             <h4>Gym Website</h4>
                             <p>Health & Fitness</p>
                         </div>
                     </div>
                     <div class="portfolio-card fade-up delay-3">
-                        <div class="portfolio-img bg-gray placeholder-corporate"></div>
+                        <div class="portfolio-img" style="background-image: url('portfolio_corporate.png');"></div>
                         <div class="portfolio-info">
                             <h4>Corporate Website</h4>
                             <p>Business & Agency</p>
                         </div>
                     </div>
                     <div class="portfolio-card fade-up delay-4">
-                        <div class="portfolio-img bg-gray placeholder-ecommerce"></div>
+                        <div class="portfolio-img" style="background-image: url('portfolio_ecommerce.png');"></div>
                         <div class="portfolio-info">
                             <h4>E-Commerce Store</h4>
                             <p>Retail</p>

@@ -11,6 +11,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet">
     
+    <!-- Dark Mode Anti-Flash Script -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark') {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        }
+    </script>
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
     
@@ -99,16 +106,23 @@
                     </div>
                 </div>
                 <div class="split-visual fade-up delay-1">
-                    <form class="contact-form" onsubmit="event.preventDefault();">
+                    <form action="https://api.web3forms.com/submit" method="POST" class="contact-form">
+                        <!-- Replace with your actual Web3Forms Access Key later -->
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Your Name" required>
+                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
                         </div>
                         <div class="form-group">
-                            <input type="email" class="form-control" placeholder="Your Email" required>
+                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
                         </div>
                         <div class="form-group">
-                            <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+                            <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
                         </div>
+                        
+                        <!-- Success Page Redirect -->
+                        <input type="hidden" name="redirect" value="https://avolo.in/contact.html?success=true">
+                        
                         <button type="submit" class="btn btn-primary w-100">Send Message</button>
                     </form>
                 </div>
