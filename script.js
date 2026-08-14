@@ -114,7 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
             igBtn.style.top = savedTop;
         }
 
+        // Prevent native dragging of the anchor tag
+        igBtn.addEventListener('dragstart', (e) => e.preventDefault());
+
         const dragStart = (e) => {
+            // Prevent default only for mouse to avoid native drag selection
+            if (e.type === 'mousedown') {
+                e.preventDefault();
+            }
             if (e.type === 'touchstart') {
                 initialX = e.touches[0].clientX - igBtn.getBoundingClientRect().left;
                 initialY = e.touches[0].clientY - igBtn.getBoundingClientRect().top;
@@ -131,7 +138,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const drag = (e) => {
             if (!isDragging) return;
-            e.preventDefault(); // Prevent scrolling while dragging on mobile
+            e.preventDefault(); // Prevent scrolling while dragging
             dragged = true;
 
             let currentX, currentY;
@@ -160,12 +167,14 @@ document.addEventListener('DOMContentLoaded', () => {
             if (!isDragging) return;
             isDragging = false;
             igBtn.style.cursor = 'grab';
-            igBtn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease'; // Re-enable normal transitions
+            igBtn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease'; 
 
             // Save position
             if (dragged) {
                 localStorage.setItem('igBtnLeft', igBtn.style.left);
                 localStorage.setItem('igBtnTop', igBtn.style.top);
+                // Reset dragged state after click event has a chance to fire
+                setTimeout(() => { dragged = false; }, 100);
             }
         };
 
