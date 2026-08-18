@@ -14,14 +14,12 @@ document.addEventListener('DOMContentLoaded', () => {
         isMenuOpen = !isMenuOpen;
         if (isMenuOpen) {
             mobileMenu.classList.add('active');
-            // Change hamburger to X
             hamburger.children[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
             hamburger.children[1].style.opacity = '0';
             hamburger.children[2].style.transform = 'rotate(-45deg) translate(7px, -7px)';
-            document.body.style.overflow = 'hidden'; // Prevent scrolling
+            document.body.style.overflow = 'hidden';
         } else {
             mobileMenu.classList.remove('active');
-            // Reset hamburger
             hamburger.children[0].style.transform = 'none';
             hamburger.children[1].style.opacity = '1';
             hamburger.children[2].style.transform = 'none';
@@ -33,17 +31,51 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburger.addEventListener('click', toggleMenu);
     }
 
-    // Close mobile menu when a link is clicked
     mobileLinks.forEach(link => {
         link.addEventListener('click', () => {
             if (isMenuOpen) toggleMenu();
         });
     });
 
+    // --- Active Nav Link Highlighting (Improv 2) ---
+    const navLinks = document.querySelectorAll('.nav-link');
+    let currentPath = window.location.pathname.split('/').pop();
+    if (currentPath === '') currentPath = 'index.html';
+    
+    navLinks.forEach(link => {
+        const linkPath = link.getAttribute('href');
+        if (linkPath === currentPath) {
+            link.setAttribute('aria-current', 'page');
+            link.classList.add('active');
+        }
+    });
 
-    // --- Scroll Animations (Intersection Observer) ---
+    // --- Toast Notification System (Bug 1 & Improv 1) ---
+    function showToast(message, type = 'success') {
+        const toast = document.createElement('div');
+        toast.className = `toast toast-${type}`;
+        toast.innerHTML = `<span class="toast-icon">${type === 'success' ? '✓' : 'ℹ'}</span><span class="toast-text">${message}</span>`;
+        document.body.appendChild(toast);
+        
+        // Trigger reflow
+        void toast.offsetWidth;
+        toast.classList.add('show');
+        
+        setTimeout(() => {
+            toast.classList.remove('show');
+            setTimeout(() => toast.remove(), 300);
+        }, 4000);
+    }
+
+    // Check URL for form success
+    if (window.location.search.includes('success=true')) {
+        showToast('Your message has been sent successfully!', 'success');
+        // Clean URL without refreshing
+        window.history.replaceState({}, document.title, window.location.pathname);
+    }
+
+    // --- Scroll Animations ---
     const fadeElements = document.querySelectorAll('.fade-up');
-
     const observerOptions = {
         root: null,
         rootMargin: '0px 0px -50px 0px',
@@ -54,8 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing once visible if you only want it to animate once
-                // observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
@@ -63,18 +93,17 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(el => observer.observe(el));
 
 
-    // --- Smooth Scrolling for Anchor Links ---
+    // --- Smooth Scrolling for Anchor Links (Bug 9) ---
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
+            // Regex check for valid CSS selector to prevent DOMException
+            if (targetId === '#' || !/^#[a-zA-Z0-9_-]+$/.test(targetId)) return;
             
             const targetElement = document.querySelector(targetId);
             if (targetElement) {
                 e.preventDefault();
-                
-                // Account for fixed header height
-                const headerHeight = document.querySelector('.header').offsetHeight;
+                const headerHeight = document.querySelector('.header') ? document.querySelector('.header').offsetHeight : 80;
                 const elementPosition = targetElement.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
 
@@ -88,22 +117,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // --- Header Scroll Effect ---
     const header = document.querySelector('.header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        });
+    }
+
+    // --- Scroll to Top Button (Improv 4) ---
+    const scrollTopBtn = document.createElement('button');
+    scrollTopBtn.className = 'scroll-top-btn btn-icon';
+    scrollTopBtn.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>';
+    scrollTopBtn.setAttribute('aria-label', 'Scroll to top');
+    document.body.appendChild(scrollTopBtn);
+
     window.addEventListener('scroll', () => {
-        if (window.scrollY > 10) {
-            header.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.05)';
+        if (window.scrollY > 300) {
+            scrollTopBtn.classList.add('visible');
         } else {
-            header.style.boxShadow = 'none';
+            scrollTopBtn.classList.remove('visible');
         }
     });
 
-    // --- Draggable Floating Instagram Button ---
+    scrollTopBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+
+    // --- Draggable Floating Instagram Button (Bug 8) ---
     const igBtn = document.querySelector('.floating-ig');
     if (igBtn) {
         let isDragging = false;
         let startX, startY, initialX, initialY;
         let dragged = false;
 
-        // Restore position from localStorage
         const savedLeft = localStorage.getItem('igBtnLeft');
         const savedTop = localStorage.getItem('igBtnTop');
         
@@ -114,11 +164,9 @@ document.addEventListener('DOMContentLoaded', () => {
             igBtn.style.top = savedTop;
         }
 
-        // Prevent native dragging of the anchor tag
         igBtn.addEventListener('dragstart', (e) => e.preventDefault());
 
         const dragStart = (e) => {
-            // Prevent default only for mouse to avoid native drag selection
             if (e.type === 'mousedown') {
                 e.preventDefault();
             }
@@ -129,18 +177,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 initialX = e.clientX - igBtn.getBoundingClientRect().left;
                 initialY = e.clientY - igBtn.getBoundingClientRect().top;
             }
-
             isDragging = true;
             dragged = false;
             igBtn.style.cursor = 'grabbing';
-            igBtn.style.transition = 'none'; // Disable transition for smooth dragging
+            igBtn.style.transition = 'none'; 
         };
 
         const drag = (e) => {
             if (!isDragging) return;
-            e.preventDefault(); // Prevent scrolling while dragging
+            e.preventDefault(); // Prevents scroll on touch
             dragged = true;
-
+            
             let currentX, currentY;
             if (e.type === 'touchmove') {
                 currentX = e.touches[0].clientX - initialX;
@@ -150,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 currentY = e.clientY - initialY;
             }
 
-            // Keep within screen bounds
             const maxX = window.innerWidth - igBtn.offsetWidth;
             const maxY = window.innerHeight - igBtn.offsetHeight;
             
@@ -166,35 +212,31 @@ document.addEventListener('DOMContentLoaded', () => {
         const dragEnd = (e) => {
             if (!isDragging) return;
             isDragging = false;
-            igBtn.style.cursor = 'grab';
+            igBtn.style.cursor = 'pointer';
             igBtn.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease'; 
 
-            // Save position
             if (dragged) {
                 localStorage.setItem('igBtnLeft', igBtn.style.left);
                 localStorage.setItem('igBtnTop', igBtn.style.top);
-                // Reset dragged state after click event has a chance to fire
                 setTimeout(() => { dragged = false; }, 100);
             }
         };
 
-        // Prevent click if it was dragged
         igBtn.addEventListener('click', (e) => {
             if (dragged) {
                 e.preventDefault();
             }
         });
 
-        // Mouse Events
         igBtn.addEventListener('mousedown', dragStart);
         document.addEventListener('mousemove', drag);
         document.addEventListener('mouseup', dragEnd);
 
-        // Touch Events
         igBtn.addEventListener('touchstart', dragStart, { passive: false });
         document.addEventListener('touchmove', drag, { passive: false });
         document.addEventListener('touchend', dragEnd);
     }
+
     // --- Dark Mode Toggle ---
     const themeToggle = document.createElement('button');
     themeToggle.className = 'btn btn-icon theme-toggle';
@@ -204,8 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
     themeToggle.style.border = 'none';
     themeToggle.style.cursor = 'pointer';
     themeToggle.style.color = 'inherit';
+    themeToggle.setAttribute('aria-label', 'Toggle Dark Mode');
     
-    // Add to header actions
     const headerActions = document.querySelector('.header-actions');
     if(headerActions) {
         headerActions.appendChild(themeToggle);
@@ -213,7 +255,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const currentTheme = localStorage.getItem('theme');
     if (currentTheme) {
-        document.documentElement.setAttribute('data-theme', currentTheme);
+        // Document head script already handles applying the theme
         if (currentTheme === 'dark') {
             themeToggle.innerHTML = '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>';
         }
@@ -242,44 +284,54 @@ document.addEventListener('DOMContentLoaded', () => {
         cursor.style.top = e.clientY + 'px';
     });
 
-    const clickables = document.querySelectorAll('a, button, .nav-link, .btn, .logo, .floating-ig');
+    const clickables = document.querySelectorAll('a, button, .nav-link, .btn, .logo, .floating-ig, label');
     clickables.forEach(el => {
         el.addEventListener('mouseenter', () => cursor.classList.add('hovering'));
         el.addEventListener('mouseleave', () => cursor.classList.remove('hovering'));
     });
 
-    // --- Smooth Page Transitions ---
+    // --- Smooth Page Transitions (Bug 2) ---
     const transitionEl = document.createElement('div');
     transitionEl.classList.add('page-transition');
     document.body.appendChild(transitionEl);
+    
+    let isTransitioning = false;
 
-    // Fade in on load
     window.addEventListener('pageshow', () => {
         transitionEl.classList.remove('active');
+        isTransitioning = false;
     });
 
-    // Fade out on navigation
     document.querySelectorAll('a[href]').forEach(link => {
         link.addEventListener('click', (e) => {
             const target = link.getAttribute('href');
-            // Don't transition on external links, hash links, or new tabs
-            if (target.startsWith('http') || target.startsWith('#') || target.startsWith('mailto') || link.target === '_blank') return;
+            // Prevent on external, hash, mailto, tel, or target blank
+            if (target.startsWith('http') || target.startsWith('#') || target.startsWith('mailto') || target.startsWith('tel:') || link.target === '_blank') return;
             
+            if (isTransitioning) {
+                e.preventDefault();
+                return;
+            }
+
             e.preventDefault();
+            isTransitioning = true;
             transitionEl.classList.add('active');
             setTimeout(() => {
                 window.location.href = target;
-            }, 400); // matches CSS transition duration
+            }, 400); 
         });
     });
 
-    // --- Animated Number Counters ---
+    // --- Animated Number Counters (Bug 6) ---
     const counters = document.querySelectorAll('.counter');
     const counterObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const target = entry.target;
                 const endVal = parseInt(target.getAttribute('data-target'));
+                
+                if (isNaN(endVal)) return;
+
                 let currentVal = 0;
                 const increment = endVal / 40;
                 const updateCounter = () => {
@@ -299,34 +351,72 @@ document.addEventListener('DOMContentLoaded', () => {
     
     counters.forEach(counter => counterObserver.observe(counter));
 
-    // --- Magnetic Buttons ---
+    // --- Magnetic Buttons (Bug 3) ---
     const magneticButtons = document.querySelectorAll('.btn:not(.theme-toggle)');
     magneticButtons.forEach(btn => {
         btn.addEventListener('mousemove', (e) => {
             const rect = btn.getBoundingClientRect();
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
+            btn.style.transition = 'none'; // Prevent CSS lag during move
             btn.style.transform = `translate(${x * 0.2}px, ${y * 0.2}px)`;
         });
         btn.addEventListener('mouseleave', () => {
+            btn.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)';
             btn.style.transform = `translate(0px, 0px)`;
+            // Reset transition property so CSS handles it normally
+            setTimeout(() => { btn.style.transition = ''; }, 300);
         });
     });
 
-    // --- Pricing Estimator ---
+    // --- Pricing Estimator (Bug 4 & Improv 6) ---
     const estCheckboxes = document.querySelectorAll('.estimator-box input[type="checkbox"]');
     const estTotalDisplay = document.getElementById('est-total');
     if (estCheckboxes.length > 0 && estTotalDisplay) {
-        let basePrice = 20000;
-        const updateTotal = () => {
-            let total = basePrice;
-            estCheckboxes.forEach(box => {
-                if(box.checked) total += parseInt(box.value);
-            });
-            estTotalDisplay.innerText = total.toLocaleString('en-IN');
+        // Dynamically get base price from initial display to prevent sync bugs
+        let currentTotal = parseInt(estTotalDisplay.innerText.replace(/,/g, '')) || 20000;
+        let basePrice = currentTotal;
+        
+        const animatePrice = (start, end) => {
+            let current = start;
+            const step = (end - start) / 20;
+            const update = () => {
+                current += step;
+                if ((step > 0 && current < end) || (step < 0 && current > end)) {
+                    estTotalDisplay.innerText = Math.ceil(current).toLocaleString('en-IN');
+                    requestAnimationFrame(update);
+                } else {
+                    estTotalDisplay.innerText = end.toLocaleString('en-IN');
+                }
+            };
+            update();
         };
+
+        const updateTotal = () => {
+            let targetTotal = basePrice;
+            estCheckboxes.forEach(box => {
+                if(box.checked) targetTotal += parseInt(box.value);
+            });
+            
+            const startVal = parseInt(estTotalDisplay.innerText.replace(/,/g, ''));
+            animatePrice(startVal, targetTotal);
+        };
+        
         estCheckboxes.forEach(box => box.addEventListener('change', updateTotal));
-        updateTotal();
+    }
+
+    // --- Testimonial Carousel Navigation ---
+    const testimonialsGrid = document.querySelector('.testimonials-grid');
+    const prevBtn = document.querySelector('.prev-testimonial');
+    const nextBtn = document.querySelector('.next-testimonial');
+    
+    if (testimonialsGrid && prevBtn && nextBtn) {
+        prevBtn.addEventListener('click', () => {
+            testimonialsGrid.scrollBy({ left: -320, behavior: 'smooth' });
+        });
+        nextBtn.addEventListener('click', () => {
+            testimonialsGrid.scrollBy({ left: 320, behavior: 'smooth' });
+        });
     }
 
 });
