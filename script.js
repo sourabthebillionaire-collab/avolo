@@ -424,7 +424,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         tiltElements.forEach(el => {
-            el.style.transformStyle = 'preserve-3d';
             el.style.willChange = 'transform';
             
             el.addEventListener('mousemove', (e) => {
@@ -439,7 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const rotateY = ((x - centerX) / centerX) * 6;
                 
                 el.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
-                el.style.transition = 'none';
+                el.style.transition = 'transform 0.1s ease-out';
             });
             
             el.addEventListener('mouseleave', () => {
