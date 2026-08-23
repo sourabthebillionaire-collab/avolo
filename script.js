@@ -419,4 +419,34 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // --- Premium 3D Mouse Tracking (Tilt Effect) ---
+    const tiltElements = document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .pricing-card, .hero-visual img');
+    
+    if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
+        tiltElements.forEach(el => {
+            el.style.transformStyle = 'preserve-3d';
+            el.style.willChange = 'transform';
+            
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = ((y - centerY) / centerY) * -6; // max 6 deg
+                const rotateY = ((x - centerX) / centerX) * 6;
+                
+                el.style.transform = `perspective(1200px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.015, 1.015, 1.015)`;
+                el.style.transition = 'none';
+            });
+            
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                el.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
+            });
+        });
+    }
+
 });

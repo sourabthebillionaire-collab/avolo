@@ -1514,3 +1514,24 @@ img, svg {
 [data-theme='dark'] .testimonial-controls .btn-icon:hover {
     background: var(--clr-green);
 }
+
+/* --- Premium 3D Effects --- */
+.hero-visual img {
+    animation: float3d 6s ease-in-out infinite;
+    transform-style: preserve-3d;
+    will-change: transform;
+    /* Increase perspective for depth */
+    transform: perspective(1200px);
+}
+
+@keyframes float3d {
+    0% { transform: perspective(1200px) translateY(0px) rotateX(0deg) rotateY(0deg); }
+    50% { transform: perspective(1200px) translateY(-15px) rotateX(2deg) rotateY(-2deg); }
+    100% { transform: perspective(1200px) translateY(0px) rotateX(0deg) rotateY(0deg); }
+}
+
+/* Ensure inner items in cards have a pop-out effect when tilted */
+.service-card > *, .portfolio-card > *, .testimonial-card > *, .pricing-card > * {
+    transform: translateZ(20px);
+    transition: transform 0.3s ease;
+}
