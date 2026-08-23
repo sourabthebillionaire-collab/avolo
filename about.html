@@ -204,7 +204,10 @@
                 <div class="footer-newsletter">
                     <h5 class="footer-title">Newsletter</h5>
                     <p>Get tips, updates and insights straight to your inbox.</p>
-                    <form class="newsletter-form" onsubmit="event.preventDefault();">
+                    <form action="https://formsubmit.co/avoloin111@gmail.com" method="POST" class="newsletter-form">
+                        <input type="hidden" name="_subject" value="New Newsletter Subscription!">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_next" value="https://avolo.in/index.html?success=true">
                         <input type="email" placeholder="Enter your email" required>
                         <button type="submit" class="btn btn-primary">Subscribe</button>
                     </form>
