@@ -420,7 +420,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Premium 3D Mouse Tracking (Tilt Effect) ---
-    const tiltElements = document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .pricing-card, .hero-visual img');
+    // Note: .hero-visual img is excluded to preserve CSS float3d animation
+    const tiltElements = document.querySelectorAll('.service-card, .portfolio-card, .testimonial-card, .pricing-card');
     
     if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         tiltElements.forEach(el => {
@@ -442,7 +443,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
             
             el.addEventListener('mouseleave', () => {
-                el.style.transform = `perspective(1200px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                el.style.transform = '';
                 el.style.transition = 'transform 0.6s cubic-bezier(0.23, 1, 0.32, 1)';
             });
         });
