@@ -1699,3 +1699,40 @@ img, svg {
     font-size: 0.95rem;
     line-height: 1.6;
 }
+
+
+/* --- Psychological Design Elements --- */
+.scarcity-badge {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    background: rgba(22, 163, 74, 0.08);
+    color: var(--clr-green);
+    padding: 0.5rem 1.25rem; border-radius: var(--radius-full);
+    font-size: 0.875rem; font-weight: 600; margin-bottom: 1.5rem;
+    border: 1px solid rgba(22, 163, 74, 0.2);
+}
+.pulse-dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: var(--clr-green);
+    box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7);
+    animation: pulse-green 2s infinite;
+}
+@keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(22, 163, 74, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(22, 163, 74, 0); }
+}
+.hero-authority {
+    display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+    margin-top: 2rem; font-size: 0.95rem; color: var(--clr-text-light);
+}
+.hero-authority .stars { color: #F59E0B; letter-spacing: 2px; font-size: 1.1rem; }
+.risk-reversal {
+    background: var(--clr-surface);
+    border: 2px dashed var(--clr-green);
+    border-radius: var(--radius-lg);
+    padding: 2.5rem; text-align: center;
+    max-width: 800px; margin: 4rem auto 0;
+    box-shadow: 0 10px 30px -10px rgba(22, 163, 74, 0.1);
+}
+.risk-reversal h3 { color: var(--clr-text); font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;}
+.risk-reversal p { color: var(--clr-text-light); font-size: 1.1rem; line-height: 1.6; }
