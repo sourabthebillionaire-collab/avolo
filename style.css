@@ -1562,3 +1562,52 @@ img, svg {
         scroll-behavior: auto !important;
     }
 }
+
+
+/* --- Project Estimator --- */
+.estimator-options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+@media (max-width: 500px) {
+    .estimator-options { grid-template-columns: 1fr; }
+}
+.est-btn {
+    background: transparent;
+    border: 2px solid var(--clr-border);
+    color: var(--clr-text);
+    padding: 1.25rem 1rem;
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+}
+.est-btn:hover {
+    border-color: var(--clr-green);
+}
+.est-btn.selected {
+    background: var(--clr-green);
+    color: var(--clr-white);
+    border-color: var(--clr-green);
+}
+.step-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid var(--clr-border);
+    padding-top: 1.5rem;
+}
+.btn-link {
+    background: none;
+    border: none;
+    color: var(--clr-text-light);
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+.btn-link:hover {
+    color: var(--clr-green);
+}

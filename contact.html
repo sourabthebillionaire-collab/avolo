@@ -143,23 +143,64 @@
                     </div>
                 </div>
                 <div class="split-visual fade-up delay-1">
-                    <form action="https://formsubmit.co/avoloin111@gmail.com" method="POST" class="contact-form">
+                    <form action="https://formsubmit.co/avoloin111@gmail.com" method="POST" class="contact-form" id="estimator-form">
                         <input type="hidden" name="_captcha" value="false">
-                        
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
-                        </div>
-                        
-                        <!-- Success Page Redirect -->
+                        <input type="hidden" name="_subject" value="New Project Estimate Request">
                         <input type="hidden" name="_next" value="https://avolo.in/contact.html?success=true">
+                        <input type="hidden" name="Project_Type" id="project-type-input" value="">
+                        <input type="hidden" name="Budget" id="budget-input" value="">
                         
-                        <button type="submit" class="btn btn-primary w-100">Send Message</button>
+                        <!-- Step 1: Services -->
+                        <div class="form-step active" id="step-1">
+                            <h3 style="margin-bottom:1.5rem; font-size: 1.5rem;">1. What do you need?</h3>
+                            <div class="estimator-options">
+                                <button type="button" class="est-btn" data-type="type" data-val="Website">Website</button>
+                                <button type="button" class="est-btn" data-type="type" data-val="E-Commerce">E-Commerce</button>
+                                <button type="button" class="est-btn" data-type="type" data-val="AI Automation">AI Automation</button>
+                                <button type="button" class="est-btn" data-type="type" data-val="Lead Generation">Lead Generation</button>
+                            </div>
+                            <div class="step-footer mt-4">
+                                <span class="text-sm" style="color: var(--clr-text-light);">Step 1 of 3</span>
+                                <button type="button" class="btn btn-outline next-step" disabled>Next Step</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Budget -->
+                        <div class="form-step" id="step-2" style="display:none;">
+                            <h3 style="margin-bottom:1.5rem; font-size: 1.5rem;">2. What is your budget?</h3>
+                            <div class="estimator-options">
+                                <button type="button" class="est-btn" data-type="budget" data-val="Under ₹10k">Under ₹10k</button>
+                                <button type="button" class="est-btn" data-type="budget" data-val="₹10k - ₹30k">₹10k - ₹30k</button>
+                                <button type="button" class="est-btn" data-type="budget" data-val="₹30k - ₹50k">₹30k - ₹50k</button>
+                                <button type="button" class="est-btn" data-type="budget" data-val="₹50k+">₹50k+</button>
+                            </div>
+                            <div class="step-footer mt-4">
+                                <button type="button" class="btn-link prev-step">← Back</button>
+                                <span class="text-sm" style="color: var(--clr-text-light);">Step 2 of 3</span>
+                                <button type="button" class="btn btn-outline next-step" disabled>Next Step</button>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Details -->
+                        <div class="form-step" id="step-3" style="display:none;">
+                            <h3 style="margin-bottom:1.5rem; font-size: 1.5rem;">3. Where should we send the estimate?</h3>
+                            <div class="form-group">
+                                <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" name="phone" class="form-control" placeholder="Your Phone Number (Optional)">
+                            </div>
+                            <div class="form-group">
+                                <textarea name="message" class="form-control" rows="2" placeholder="Any extra details? (Optional)"></textarea>
+                            </div>
+                            <div class="step-footer mt-4">
+                                <button type="button" class="btn-link prev-step">← Back</button>
+                                <button type="submit" class="btn btn-primary">Get My Estimate</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

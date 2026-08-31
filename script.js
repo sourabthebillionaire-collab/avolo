@@ -449,4 +449,51 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
+    // Project Estimator Logic
+    const estForm = document.getElementById('estimator-form');
+    if (estForm) {
+        const steps = estForm.querySelectorAll('.form-step');
+        const nextBtns = estForm.querySelectorAll('.next-step');
+        const prevBtns = estForm.querySelectorAll('.prev-step');
+        const estBtns = estForm.querySelectorAll('.est-btn');
+        let currentStep = 0;
+
+        estBtns.forEach(btn => {
+            btn.addEventListener('click', function() {
+                const type = this.getAttribute('data-type');
+                // Deselect siblings
+                estForm.querySelectorAll(`.est-btn[data-type="${type}"]`).forEach(b => b.classList.remove('selected'));
+                this.classList.add('selected');
+                
+                // Set hidden input value
+                if (type === 'type') document.getElementById('project-type-input').value = this.getAttribute('data-val');
+                if (type === 'budget') document.getElementById('budget-input').value = this.getAttribute('data-val');
+
+                // Enable next button for current step
+                const nextBtn = steps[currentStep].querySelector('.next-step');
+                if(nextBtn) {
+                    nextBtn.disabled = false;
+                    nextBtn.classList.remove('btn-outline');
+                    nextBtn.classList.add('btn-primary');
+                }
+            });
+        });
+
+        nextBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                steps[currentStep].style.display = 'none';
+                currentStep++;
+                steps[currentStep].style.display = 'block';
+            });
+        });
+
+        prevBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                steps[currentStep].style.display = 'none';
+                currentStep--;
+                steps[currentStep].style.display = 'block';
+            });
+        });
+    }
 });
