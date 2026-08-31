@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://avolo.in/sitemap.xml
