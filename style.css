@@ -1736,3 +1736,101 @@ img, svg {
 }
 .risk-reversal h3 { color: var(--clr-text); font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; justify-content: center; gap: 0.5rem;}
 .risk-reversal p { color: var(--clr-text-light); font-size: 1.1rem; line-height: 1.6; }
+
+
+/* ============================================================ */
+/* --- ULTRA POLISH OVERRIDES (Refining Psychological UI) --- */
+/* ============================================================ */
+
+/* 1. Sleeker Scarcity Badge (More subtle, less chunky) */
+.scarcity-badge {
+    background: var(--clr-surface) !important;
+    border: 1px solid var(--clr-border) !important;
+    color: var(--clr-text) !important;
+    padding: 0.35rem 1rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-sm);
+}
+.pulse-dot {
+    width: 6px !important; height: 6px !important;
+}
+
+/* 2. Premium Guarantee Box (Removed cheap dashes, added sleek gradient & layout) */
+.risk-reversal {
+    border: 1px solid var(--clr-border) !important;
+    border-left: 4px solid var(--clr-green) !important;
+    background: linear-gradient(145deg, var(--clr-surface), rgba(22, 163, 74, 0.02)) !important;
+    box-shadow: var(--shadow-md) !important;
+    padding: 2rem !important;
+    text-align: left !important;
+    display: flex !important;
+    flex-direction: column;
+    align-items: flex-start !important;
+}
+.risk-reversal h3 {
+    justify-content: flex-start !important;
+    font-size: 1.25rem !important;
+    margin-bottom: 1rem !important;
+}
+.risk-reversal p {
+    font-size: 1rem !important;
+}
+@media (min-width: 768px) {
+    .risk-reversal {
+        flex-direction: row !important;
+        align-items: center !important;
+        gap: 2.5rem;
+        padding: 2.5rem !important;
+    }
+    .risk-reversal h3 { 
+        margin-bottom: 0 !important; 
+        min-width: 220px; 
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 0.75rem !important;
+    }
+}
+
+/* 3. Button Refinements (Fixing squished text on mobile) */
+.btn-icon {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+.hero-ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+/* 4. Portfolio Modal Mobile Polish (Scaling down massive elements on small screens) */
+@media (max-width: 600px) {
+    .modal-content {
+        padding: 1.5rem !important;
+        width: 92% !important;
+    }
+    .modal-body img {
+        height: 180px !important;
+        margin-bottom: 1rem !important;
+    }
+    .modal-stats {
+        padding: 1rem !important;
+        font-size: 0.85rem !important;
+        margin: 1rem 0 !important;
+    }
+    .modal-close {
+        top: 0.75rem !important;
+        right: 1rem !important;
+    }
+}
+
+/* 5. Fix Hero Authority alignment */
+.hero-authority {
+    opacity: 0.8;
+}
+.hero-authority .stars {
+    font-size: 0.9rem !important;
+}
