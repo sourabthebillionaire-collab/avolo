@@ -496,4 +496,80 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // Portfolio Modals Logic
+    const caseData = {
+        'restaurant': {
+            title: 'Modern Restaurant Platform',
+            category: 'Food & Beverage',
+            img: 'portfolio_restaurant.webp',
+            desc: 'A complete digital overhaul for a premium restaurant featuring a custom online reservation system and dynamic menu management.',
+            results: 'Increased online table bookings by 45% and reduced phone-in errors to zero.',
+            tech: 'Next.js, Stripe, Sanity CMS'
+        },
+        'gym': {
+            title: 'Fitness Center Portal',
+            category: 'Health & Fitness',
+            img: 'portfolio_gym.webp',
+            desc: 'A high-energy membership platform that allows members to book classes, track progress, and manage subscriptions seamlessly.',
+            results: 'Generated 120+ new signups in the first month through the optimized funnel.',
+            tech: 'React, Node.js, PostgreSQL'
+        },
+        'corporate': {
+            title: 'B2B Corporate Engine',
+            category: 'Business Services',
+            img: 'portfolio_corporate.webp',
+            desc: 'A sleek, corporate authority site designed as a B2B lead generation engine with automated CRM syncing.',
+            results: 'Doubled qualified lead volume and saved the sales team 15 hours/week via automation.',
+            tech: 'Webflow, Zapier, HubSpot'
+        },
+        'ecommerce': {
+            title: 'High-Conversion Storefront',
+            category: 'E-Commerce',
+            img: 'portfolio_ecommerce.webp',
+            desc: 'A lightning-fast modern e-commerce storefront focusing on mobile-first conversions and flawless checkout flow.',
+            results: 'Improved cart conversion rate by 2.4x and achieved sub-second page loads.',
+            tech: 'Shopify Plus, Tailwind CSS'
+        }
+    };
+
+    const portCards = document.querySelectorAll('.portfolio-card[data-modal]');
+    const modal = document.getElementById('case-study-modal');
+    if (modal && portCards.length > 0) {
+        const closeBtn = document.getElementById('modal-close-btn');
+        
+        portCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const id = card.getAttribute('data-modal');
+                const data = caseData[id];
+                if(data) {
+                    document.getElementById('modal-img').src = data.img;
+                    document.getElementById('modal-title').textContent = data.title;
+                    document.getElementById('modal-category').textContent = data.category;
+                    document.getElementById('modal-desc').textContent = data.desc;
+                    document.getElementById('modal-results').textContent = data.results;
+                    document.getElementById('modal-tech').textContent = data.tech;
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // prevent scrolling
+                }
+            });
+        });
+
+        const closeModal = () => {
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        };
+
+        closeBtn.addEventListener('click', closeModal);
+        modal.addEventListener('click', (e) => {
+            if(e.target === modal) closeModal();
+        });
+        
+        // Escape key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
+                closeModal();
+            }
+        });
+    }
 });
