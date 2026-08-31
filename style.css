@@ -1528,3 +1528,24 @@ img, svg {
     transform: perspective(1200px);
 }
 
+
+
+/* --- Ultra Premium UI Polish --- */
+::selection {
+    background: var(--clr-green);
+    color: var(--clr-white);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: var(--clr-gray-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: var(--clr-border);
+    border-radius: var(--radius-full);
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--clr-green);
+}
